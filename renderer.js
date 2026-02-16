@@ -232,7 +232,9 @@ function buildPage(section) {
   if (section.img) {
     pg.classList.add('has-overlay-img');
     const imgEl = document.createElement('img');
-    imgEl.crossOrigin = 'anonymous';
+    if (window.location.protocol !== 'file:') {
+      imgEl.crossOrigin = 'anonymous';
+    }
     imgEl.src = section.img;
     imgEl.style.width = '65%';
     imgEl.style.height = '65%';
