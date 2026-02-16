@@ -19,18 +19,18 @@ Here is a practice plan. Follow it, adjust it, make it yours. But follow somethi
 
 **Every session should include:**
 
-•5 minutes of falling practice (even on days you don't feel like it)
+• 5 minutes of falling practice (even on days you don't feel like it)
 
-•Pushing and riding in a straight line
+• Pushing and riding in a straight line
 
-•Stopping (foot brake, step-off)
+• Stopping (foot brake, step-off)
 
-•Gentle turns in both directions
+• Gentle turns in both directions
 
 **Your goals:**
 
-•Push and ride 50 feet without stepping off
+• Push and ride 50 feet without stepping off
 
-•Stop on purpose within a few feet of where you intend
+• Stop on purpose within a few feet of where you intend
 
-•Make S-turns without feeling like you're about to die
+• Make S-turns without feeling like you're about to die
