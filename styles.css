@@ -27,7 +27,6 @@ body { background:#E5DDD5; font-family:'Nunito',sans-serif; color:#3D2C24; paddi
 .spread-column.right-page .pg {
   border-radius:0 3px 3px 0;
   box-shadow: 2px 1px 4px rgba(0,0,0,.10), 3px 6px 16px rgba(0,0,0,.05);
-  border-left:1px solid #e0d6ca;
 }
 .spread:hover .spread-column.left-page .pg {
   box-shadow: -3px 3px 6px rgba(0,0,0,.12), -4px 10px 24px rgba(0,0,0,.07);
@@ -43,22 +42,9 @@ body { background:#E5DDD5; font-family:'Nunito',sans-serif; color:#3D2C24; paddi
 
 /* Spine shadow between pages */
 .spine {
-  width:6px;
-  background:linear-gradient(to right,
-    rgba(0,0,0,.08),
-    rgba(0,0,0,.03) 30%,
-    rgba(0,0,0,.01) 50%,
-    rgba(0,0,0,.03) 70%,
-    rgba(0,0,0,.08));
+  width:0;
   align-self:stretch;
   position:relative;
-}
-.spine::after {
-  content:'';
-  position:absolute;
-  top:0; bottom:0; left:50%;
-  width:1px;
-  background:rgba(0,0,0,.04);
 }
 
 /* Page */
@@ -143,6 +129,16 @@ body { background:#E5DDD5; font-family:'Nunito',sans-serif; color:#3D2C24; paddi
   color:#6B5A8A;
 }
 
+/* Pullquote (poem-styled inline callout) */
+.pullquote {
+  text-align:center;
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  color:#6B5A8A;
+  margin:8px 10px;
+  line-height:1.6;
+}
+
 /* Below page: number + illustration descriptions */
 .page-footer {
   max-width:380px;
@@ -166,25 +162,7 @@ body { background:#E5DDD5; font-family:'Nunito',sans-serif; color:#3D2C24; paddi
   margin:32px auto;
   max-width:764px;
   height:20px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-}
-.spread-break::before,
-.spread-break::after {
-  content:'';
-  flex:1;
-  height:1px;
-  background:linear-gradient(to var(--dir, right), transparent, #ccc5bc 20%, #ccc5bc 80%, transparent);
-}
-.spread-break::before { --dir:right; }
-.spread-break::after { --dir:left; }
-.spread-break-dot {
-  width:5px; height:5px;
-  border-radius:50%;
-  background:#ccc5bc;
-  flex-shrink:0;
+  display:none;
 }
 
 /* Cover */
