@@ -5,9 +5,9 @@ page: 25
 
 **THE FEAR**
 
-*[Kitty peeking out from behind a ramp at the skatepark, big hopeful eyes, paws clasped together. Baby Skate Bunny on her board nearby, patient, one paw extended. Not pushing. Just offering.]
+*[Kitty peeking out from behind a ramp at the skatepark, big hopeful eyes, paws clasped together. Baby Skate Bunny on her board nearby, patient, one paw extended. Not pushing. Just offering.]*
 
-*Fear in skateboarding is real and it is useful.
+Fear in skateboarding is real and it is useful.
 
 Fear is your brain saying: "Hey, are you sure about this? Have you thought this through? Do you have the skills for this yet?"
 

@@ -5,9 +5,9 @@ page: 19
 
 **TURNING**
 
-*[Baby Skate Bunny carving a big lazy S-turn, looking relaxed and happy. Dotted line behind showing the S-path. A couple of orange cones in the background.]
+*[Baby Skate Bunny carving a big lazy S-turn, looking relaxed and happy. Dotted line behind showing the S-path. A couple of orange cones in the background.]*
 
-*Remember how we leaned on the grass? Same thing, but now you're rolling.
+Remember how we leaned on the grass? Same thing, but now you're rolling.
 
 Lean your toes and the board curves one way. Lean your heels and it curves the other. These are called **carving turns** and they are how you steer.
 

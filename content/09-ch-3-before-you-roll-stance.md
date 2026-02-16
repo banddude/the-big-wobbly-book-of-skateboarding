@@ -15,9 +15,9 @@ But we're going to spend a few minutes not riding it first, and I promise this w
 
 **FINDING YOUR STANCE**
 
-*[Two panels side by side: Baby Skate Bunny in "regular" stance (left foot forward), Squirrel in "goofy" stance (right foot forward). Both looking perfectly content. A little label under each: "Regular" and "Goofy." Neither is wrong.]
+*[Two panels side by side: Baby Skate Bunny in "regular" stance (left foot forward), Squirrel in "goofy" stance (right foot forward). Both looking perfectly content. A little label under each: "Regular" and "Goofy." Neither is wrong.]*
 
-*You need to figure out which foot goes in front.
+You need to figure out which foot goes in front.
 
 **Regular** means your left foot is forward. **Goofy** means your right foot is forward. Neither one is better or worse. "Goofy" is not an insult. (Well, it might be in other contexts, but not here.)
 

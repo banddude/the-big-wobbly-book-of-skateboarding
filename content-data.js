@@ -179,7 +179,7 @@ Here's the thing about safety gear: the people who are the actual best at skateb
 
 Because your brain is you. Your brain is every trick you'll ever learn, every joke you'll ever laugh at, every friend you'll ever make. It deserves a helmet.
 
-Here's what IS cool: being able to skateboard again tomorrow because you were smart today.
+~~ Here's what IS cool: being able to skateboard again tomorrow because you were smart today.
 
 *[Baby Skate Bunny in full gear — helmet, knee pads, wrist guards — standing proudly with paws on hips. The critters lined up getting geared up too. Duck trying to figure out how to put on wrist guards with wings, looking baffled. Squirrel adjusting a helmet that's slightly too big.]*
 `,
@@ -253,9 +253,9 @@ But we're going to spend a few minutes not riding it first, and I promise this w
 
 **FINDING YOUR STANCE**
 
-*[Two panels side by side: Baby Skate Bunny in "regular" stance (left foot forward), Squirrel in "goofy" stance (right foot forward). Both looking perfectly content. A little label under each: "Regular" and "Goofy." Neither is wrong.]
+*[Two panels side by side: Baby Skate Bunny in "regular" stance (left foot forward), Squirrel in "goofy" stance (right foot forward). Both looking perfectly content. A little label under each: "Regular" and "Goofy." Neither is wrong.]*
 
-*You need to figure out which foot goes in front.
+You need to figure out which foot goes in front.
 
 **Regular** means your left foot is forward. **Goofy** means your right foot is forward. Neither one is better or worse. "Goofy" is not an insult. (Well, it might be in other contexts, but not here.)
 
@@ -347,9 +347,9 @@ The goal is to land on the big, padded, fleshy parts of your body (thighs, butt,
 
 If you're wearing hard-shell knee pads (and you are, because you read Chapter 2), you can drop to your knees and slide. This is how bowl and ramp skaters bail out of tricks. It looks dramatic and it works. Here's how to practice:
 
-*[Baby Skate Bunny doing a dramatic knee slide on a smooth surface. Dust clouds behind her. Knee pads gleaming. Jay watching from the side with wide eyes, impressed. Speed lines.]
+*[Baby Skate Bunny doing a dramatic knee slide on a smooth surface. Dust clouds behind her. Knee pads gleaming. Jay watching from the side with wide eyes, impressed. Speed lines.]*
 
-*On a smooth surface (a garage, a basketball court, a kitchen floor if your parents are out and the floor is clean), put on your knee pads. Walk forward. Drop to your knees and slide. That's it. Practice it until it feels natural. The goal is to make this your default bail-out move when things go wrong.
+On a smooth surface (a garage, a basketball court, a kitchen floor if your parents are out and the floor is clean), put on your knee pads. Walk forward. Drop to your knees and slide. That's it. Practice it until it feels natural. The goal is to make this your default bail-out move when things go wrong.
 `,
     "14-ch-4-how-to-fall-rule-5-practice.md": `---
 label: "Ch 4 — How to Fall (rule 5 + practice)"
@@ -404,9 +404,9 @@ Find a smooth, flat surface. A tennis court, an empty parking lot, a wide sidewa
 
 **PUSHING**
 
-*[Baby Skate Bunny pushing off, one foot on the board, one foot on the ground. Wind lines behind her ears. Squirrel rolling alongside looking thrilled, mouth open. Cream background.]
+*[Baby Skate Bunny pushing off, one foot on the board, one foot on the ground. Wind lines behind her ears. Squirrel rolling alongside looking thrilled, mouth open. Cream background.]*
 
-*Your front foot goes on the board, angled forward, toes pointing roughly toward the nose. (Later, you'll rotate it sideways. For now, forward.)
+Your front foot goes on the board, angled forward, toes pointing roughly toward the nose. (Later, you'll rotate it sideways. For now, forward.)
 
 Your back foot pushes off the ground, like you're riding a scooter. Short, gentle pushes. You don't need speed. You need control.
 
@@ -444,9 +444,9 @@ page: 19
 
 **TURNING**
 
-*[Baby Skate Bunny carving a big lazy S-turn, looking relaxed and happy. Dotted line behind showing the S-path. A couple of orange cones in the background.]
+*[Baby Skate Bunny carving a big lazy S-turn, looking relaxed and happy. Dotted line behind showing the S-path. A couple of orange cones in the background.]*
 
-*Remember how we leaned on the grass? Same thing, but now you're rolling.
+Remember how we leaned on the grass? Same thing, but now you're rolling.
 
 Lean your toes and the board curves one way. Lean your heels and it curves the other. These are called **carving turns** and they are how you steer.
 
@@ -545,9 +545,9 @@ If you've done all the above, you are ready to start learning your first real tr
 
 The ollie is skateboarding's foundational trick. It's how you jump with the board. Its inventor, Alan "Ollie" Gelfand, actually stumbled onto it by accident in the late 1970s while skating a poorly built pool in Florida—and it took the skateboarding world years to fully understand and adapt it. Rodney Mullen later figured out how to do it on flat ground. Learning to ollie will take you weeks of practice. This is normal.
 
-*[Baby Skate Bunny mid-ollie, board in the air under her feet, ears flying up, looking surprised and delighted. The critters below looking up with star-eyes and open mouths. This is the aspirational image.]
+*[Baby Skate Bunny mid-ollie, board in the air under her feet, ears flying up, looking surprised and delighted. The critters below looking up with star-eyes and open mouths. This is the aspirational image.]*
 
-*But that's another chapter for another day. (Or another book. One that will definitely contain diagrams and probably more jokes about gravity.)
+But that's another chapter for another day. (Or another book. One that will definitely contain diagrams and probably more jokes about gravity.)
 
 > A note for parents: Progress is not linear. Some days they'll look amazing. Some days they'll look like they've never seen a skateboard before. Both are normal. Both are part of the process. Keep showing up.
 `,
@@ -597,9 +597,9 @@ page: 24
 
 **SEE A DOCTOR if:** There's visible deformity. Pain is severe and not improving. You can't put weight on something. You hit your head hard. Any head injury symptom persists.
 
-*[Two panels side by side. Left: Kitty with a bandaid on her elbow, getting back on the board, small determined smile. Right: Duck sitting on a bench with an ice pack on his ankle, watching the others skate, content to wait. Both are okay. Both are labeled.]
+*[Two panels side by side. Left: Kitty with a bandaid on her elbow, getting back on the board, small determined smile. Right: Duck sitting on a bench with an ice pack on his ankle, watching the others skate, content to wait. Both are okay. Both are labeled.]*
 
-*This is not being dramatic. This is being smart. Skateboarders who ignore injuries become ex-skateboarders.
+This is not being dramatic. This is being smart. Skateboarders who ignore injuries become ex-skateboarders.
 
 **WHEN YOU FEEL DEFEATED**
 
@@ -622,9 +622,9 @@ page: 25
 
 **THE FEAR**
 
-*[Kitty peeking out from behind a ramp at the skatepark, big hopeful eyes, paws clasped together. Baby Skate Bunny on her board nearby, patient, one paw extended. Not pushing. Just offering.]
+*[Kitty peeking out from behind a ramp at the skatepark, big hopeful eyes, paws clasped together. Baby Skate Bunny on her board nearby, patient, one paw extended. Not pushing. Just offering.]*
 
-*Fear in skateboarding is real and it is useful.
+Fear in skateboarding is real and it is useful.
 
 Fear is your brain saying: "Hey, are you sure about this? Have you thought this through? Do you have the skills for this yet?"
 
@@ -809,7 +809,7 @@ type: poem
 *(Now go skateboard.)*
 `,
     "32-appendix-first-aid-scrapessprains.md": `---
-label: "Appendix — First Aid (scrapes/sprains)"
+label: "Appendix — First Aid (urgent)"
 page: 34
 ---
 
@@ -821,30 +821,52 @@ Because you're going to need this page. Keep it bookmarked.
 
 *[Baby Skate Bunny wearing a tiny red cross hat, holding up a bandaid in one paw and a thumbs-up with the other. Small, sweet, reassuring. A little first aid kit open beside her.]*
 
-**ROAD RASH (SCRAPES AND ABRASIONS)**
+**STOP SKATING RIGHT NOW IF:**
 
-Clean it. Yes, it stings. Clean it anyway. Use soap and water, not just a rinse. Remove any debris. Apply antibiotic ointment. Cover with a bandage. Change the bandage daily. Road rash looks awful but usually heals quickly.
+You hit your head (even with a helmet). Something looks bent or wrong. You cannot put weight on it. You feel dizzy, sick, or confused. You cannot move something that should move. There is a lot of swelling right away.
 
-**BRUISES**
-
-Ice for 15-20 minutes, wrapped in a cloth. Rest. They'll turn purple, then green, then yellow. This is your body's color wheel. It's healing.
-
-**SPRAINS**
-
-The old advice was RICE: Rest, Ice, Compression, Elevation. The newer thinking is that gentle movement is actually better than total rest—your body heals faster when blood is flowing. So: ice it for 15-20 minutes at a time to manage pain (wrapped in a cloth, never directly on skin), use compression to reduce swelling, elevate it when you can, but also try to keep moving gently within your pain tolerance. If the swelling is significant or it's not improving after a couple of days, see a doctor. Ankles are the most common skateboarding sprain.
-`,
-    "33-appendix-first-aid-headfractures.md": `---
-label: "Appendix — First Aid (head/fractures)"
-page: 35
----
+These are not "walk it off" situations. These are "tell a grown-up and possibly go to the hospital" situations.
 
 **HEAD INJURIES**
 
-If you hit your head, **stop skating immediately**. Even with a helmet. Watch for: headache, dizziness, confusion, nausea, vision changes, difficulty balancing, feeling "off." These could indicate a concussion. See a doctor. Do not return to skating until cleared. This is not optional.
+If you hit your head, **you are done skating for the day.** No exceptions. Even with a helmet. Watch for headache, dizziness, confusion, nausea, vision changes, or just feeling "off." Any of those could mean a concussion. See a doctor. Do not skate again until a doctor says you can.
 
-**FRACTURES**
+After a hard head impact, check your helmet too. Skate helmets (the dual-certified kind, CPSC and ASTM) are designed to handle multiple low impacts. That is why skaters use them instead of bike helmets. But if you see a crack, if the foam inside is crushed or dented, or if you took a hit hard enough to rattle your brain, replace it. A damaged helmet is decoration, not protection.
 
-If something looks wrong, hurts badly, or you can't move it normally, go to the doctor. Wrist fractures are sneaky—they sometimes just feel like a bad sprain. When in doubt, get an X-ray.
+**WRIST AND ARM INJURIES**
+
+When you fall, your instinct is to catch yourself with your hands. Everyone does it. This is why wrist fractures are the single most common skateboarding broken bone, especially in kids. This is also why we wear wrist guards.
+
+If your wrist hurts after a fall and it is swollen or tender when you press on it, get an X-ray. Wrist fractures are sneaky. They sometimes feel like a bad sprain. When in doubt, get it checked. A fracture that heals wrong is a much bigger problem than a trip to urgent care.
+
+**OTHER FRACTURES**
+
+If something looks wrong, hurts badly, swells quickly, or you cannot move it normally, go to the doctor. Do not try to figure out if it is "just a sprain" on your own. That is what X-rays are for.
+`,
+    "33-appendix-first-aid-headfractures.md": `---
+label: "Appendix — First Aid (everyday)"
+page: 35
+---
+
+**SPRAINS**
+
+You might hear people say "RICE" (Rest, Ice, Compression, Elevation). The current advice is called PEACE & LOVE: Protect it. Elevate it. Avoid anti-inflammatories for the first day or two. Compress it. Educate yourself on the injury.
+
+Then: Load it gently, because your body heals faster when blood is flowing. Stay optimistic, because attitude actually matters. Get your heart rate up with other exercise if you can. Keep moving within your pain tolerance.
+
+Ice can help with pain, but wrap it in a cloth (never directly on skin) and only 15-20 minutes at a time. If the swelling is significant or it is not improving after a couple of days, see a doctor. Ankles are the most common skateboarding sprain.
+
+**ROAD RASH (SCRAPES AND ABRASIONS)**
+
+Clean it. Yes, it stings. Clean it anyway. Use soap and water, not just a rinse. Remove any debris (a clean washcloth helps). Apply antibiotic ointment. Cover with a bandage. Change the bandage daily. Road rash looks awful but usually heals quickly.
+
+**BRUISES**
+
+Ice for 15-20 minutes, wrapped in a cloth. Rest. They will turn purple, then green, then yellow. This is your body's color wheel. It is healing.
+
+**SKATING IN THE HEAT**
+
+Drink water before you skate, while you skate, and after you skate. If you feel dizzy, nauseous, or your skin gets hot and stops sweating, get into the shade immediately and drink water. Heat exhaustion is real and it sneaks up on you, especially when you are having fun and not paying attention. Take breaks. Find shade. Bring a water bottle. This is not optional.
 
 *When in doubt: rest, ice, and a grown-up's opinion. Your body is not replaceable. Your skateboard is.*
 `
