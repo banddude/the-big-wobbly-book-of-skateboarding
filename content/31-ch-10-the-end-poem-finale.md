@@ -1,6 +1,7 @@
 ---
 label: "Ch 10 — The End (poem + finale)"
 page: 33
+type: poem
 ---
 
 *A board beneath your feet, my dear,*

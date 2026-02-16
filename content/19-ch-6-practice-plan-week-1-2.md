@@ -15,20 +15,22 @@ Here is a practice plan. Follow it, adjust it, make it yours. But follow somethi
 
 *[Baby Skate Bunny holding a little clipboard with checkmarks on it. In the background, critters practicing different things — Squirrel pushing, Duck turning, Kitty just standing on a board looking proud of herself, Turtle slowly rolling.]*
 
-**WEEK 1--2: THE BASICS**
+**WEEK 1-2: THE BASICS**
 
 **Every session should include:**
 
-- • 5 minutes of falling practice (even on days you don't feel like it)
+•5 minutes of falling practice (even on days you don't feel like it)
 
-- • Pushing and riding in a straight line
+•Pushing and riding in a straight line
 
-- • Stopping (foot brake, step-off)
+•Stopping (foot brake, step-off)
 
-- • Gentle turns in both directions**Your goals:**</p>
+•Gentle turns in both directions
 
-- • Push and ride 50 feet without stepping off
+**Your goals:**
 
-- • Stop on purpose within a few feet of where you intend
+•Push and ride 50 feet without stepping off
 
-- • Make S-turns without feeling like you're about to die
+•Stop on purpose within a few feet of where you intend
+
+•Make S-turns without feeling like you're about to die

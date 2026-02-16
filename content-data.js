@@ -457,60 +457,62 @@ Here is a practice plan. Follow it, adjust it, make it yours. But follow somethi
 
 *[Baby Skate Bunny holding a little clipboard with checkmarks on it. In the background, critters practicing different things — Squirrel pushing, Duck turning, Kitty just standing on a board looking proud of herself, Turtle slowly rolling.]*
 
-**WEEK 1--2: THE BASICS**
+**WEEK 1-2: THE BASICS**
 
 **Every session should include:**
 
-- • 5 minutes of falling practice (even on days you don't feel like it)
+•5 minutes of falling practice (even on days you don't feel like it)
 
-- • Pushing and riding in a straight line
+•Pushing and riding in a straight line
 
-- • Stopping (foot brake, step-off)
+•Stopping (foot brake, step-off)
 
-- • Gentle turns in both directions**Your goals:**</p>
+•Gentle turns in both directions
 
-- • Push and ride 50 feet without stepping off
+**Your goals:**
 
-- • Stop on purpose within a few feet of where you intend
+•Push and ride 50 feet without stepping off
 
-- • Make S-turns without feeling like you're about to die
+•Stop on purpose within a few feet of where you intend
+
+•Make S-turns without feeling like you're about to die
 `,
     "20-ch-6-practice-plan-week-3-8.md": `---
 label: "Ch 6 — Practice Plan (week 3-8)"
 page: 21
 ---
 
-**WEEK 3--4: BUILDING CONFIDENCE**
+**WEEK 3-4: BUILDING CONFIDENCE**
 
 **Add to your sessions:**
 
-- • Riding over small cracks and bumps (weight forward, knees bent)
+•Riding over small cracks and bumps (weight forward, knees bent)
 
-- • Faster pushes and longer rides
+•Faster pushes and longer rides
 
-- • Tighter turns
+•Tighter turns
 
-- • Riding in a circle, both directions**Your goals:**</p>
+•Riding in a circle, both directions**Your goals:**</p>
 
-- • Ride comfortably at a jogging pace
+•Ride comfortably at a jogging pace
 
-- • Turn sharply enough to avoid an obstacle
+•Turn sharply enough to avoid an obstacle
 
-- • Feel relaxed on the board (you'll know because your shoulders drop)**WEEK 5--8: READY FOR MORE**</p>
+•Feel relaxed on the board (you'll know because your shoulders drop)**WEEK 5-8: READY FOR MORE**</p>
 
 **Now you can start exploring:**
 
-- • Riding up and down gentle slopes (GENTLE. I said GENTLE.)
+•Riding up and down gentle slopes (GENTLE. I said GENTLE.)
 
-- • Kickturns (lifting the front wheels and pivoting on the back wheels)
+•Kickturns (lifting the front wheels and pivoting on the back wheels)
 
-- • Riding switch (with your other foot forward—this will feel like
+•Riding switch (with your other foot forward—this will feel like
 starting over, and that's okay)</p>
 
-- • Manuals (balancing on just the back wheels while rolling—start with
+•Manuals (balancing on just the back wheels while rolling—start with
 one second, then two)</p>
 
-- • Tic-tacs (quick left-right kickturns to build speed without pushing)
+•Tic-tacs (quick left-right kickturns to build speed without pushing)
 `,
     "21-ch-6-practice-plan-week-9.md": `---
 label: "Ch 6 — Practice Plan (week 9+)"
@@ -749,6 +751,7 @@ And you push.
     "31-ch-10-the-end-poem-finale.md": `---
 label: "Ch 10 — The End (poem + finale)"
 page: 33
+type: poem
 ---
 
 *A board beneath your feet, my dear,*
@@ -794,11 +797,11 @@ Clean it. Yes, it stings. Clean it anyway. Use soap and water, not just a rinse.
 
 **BRUISES**
 
-Ice for 15--20 minutes, wrapped in a cloth. Rest. They'll turn purple, then green, then yellow. This is your body's color wheel. It's healing.
+Ice for 15-20 minutes, wrapped in a cloth. Rest. They'll turn purple, then green, then yellow. This is your body's color wheel. It's healing.
 
 **SPRAINS**
 
-The old advice was RICE: Rest, Ice, Compression, Elevation. The newer thinking is that gentle movement is actually better than total rest—your body heals faster when blood is flowing. So: ice it for 15--20 minutes at a time to manage pain (wrapped in a cloth, never directly on skin), use compression to reduce swelling, elevate it when you can, but also try to keep moving gently within your pain tolerance. If the swelling is significant or it's not improving after a couple of days, see a doctor. Ankles are the most common skateboarding sprain.
+The old advice was RICE: Rest, Ice, Compression, Elevation. The newer thinking is that gentle movement is actually better than total rest—your body heals faster when blood is flowing. So: ice it for 15-20 minutes at a time to manage pain (wrapped in a cloth, never directly on skin), use compression to reduce swelling, elevate it when you can, but also try to keep moving gently within your pain tolerance. If the swelling is significant or it's not improving after a couple of days, see a doctor. Ankles are the most common skateboarding sprain.
 `,
     "33-appendix-first-aid-headfractures.md": `---
 label: "Appendix — First Aid (head/fractures)"
