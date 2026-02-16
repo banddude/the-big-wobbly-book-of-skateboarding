@@ -17,6 +17,8 @@ Get on the grass again. Put on all your gear. Now:
 
 **3. Practice the knee slide.** On a smooth surface, walk and drop. Ten times.
 
-**4. Practice running off the board.** On the grass, stand on your board, then step forward and jog a few steps. Ten times.This is going to feel ridiculous. You are a person deliberately falling down on a lawn. But every professional skateboarder has done this. Every single one. The ones who didn't practice falling are the ones who stopped skating because they got hurt.
+**4. Practice running off the board.** On the grass, stand on your board, then step forward and jog a few steps. Ten times.
+
+This is going to feel ridiculous. You are a person deliberately falling down on a lawn. But every professional skateboarder has done this. Every single one. The ones who didn't practice falling are the ones who stopped skating because they got hurt.
 
 > A note for parents: Falling practice is one of the most valuable things you can do with your kid. Do it with them. Fall down on the grass together. Laugh about it. Make it fun. If they see you doing it, it's not embarrassing—it's just what you do.

@@ -213,7 +213,9 @@ Good knee pads aren't just protection—they're actually a falling tool. We're g
 
 Like knee pads but for your elbows. Your elbows are pointy and full of nerve endings and they would like to be protected, please.
 
-**SKATE SHOES (IMPORTANT)**Flat-soled shoes. Not running shoes (too curved). Not sandals (no). Not boots (too heavy). Flat, grippy soles that can feel the board under your feet. Vans, Etnies, Nike SB—there are lots of options. The grip tape will eat them eventually. This is the cost of doing business.
+**SKATE SHOES (IMPORTANT)**
+
+Flat-soled shoes. Not running shoes (too curved). Not sandals (no). Not boots (too heavy). Flat, grippy soles that can feel the board under your feet. Vans, Etnies, Nike SB—there are lots of options. The grip tape will eat them eventually. This is the cost of doing business.
 
 > A note for parents: Please, please, please do not make safety gear a negotiation. It's not optional at any age. And the best way to make your kid wear gear without a fight? Wear some yourself if you're out there too. Model it. Make it normal. Make it boring. Boring is the goal.
 `,
@@ -251,7 +253,9 @@ But we're going to spend a few minutes not riding it first, and I promise this w
 
 **FINDING YOUR STANCE**
 
-*[Two panels side by side: Baby Skate Bunny in "regular" stance (left foot forward), Squirrel in "goofy" stance (right foot forward). Both looking perfectly content. A little label under each: "Regular" and "Goofy." Neither is wrong.]*You need to figure out which foot goes in front.
+*[Two panels side by side: Baby Skate Bunny in "regular" stance (left foot forward), Squirrel in "goofy" stance (right foot forward). Both looking perfectly content. A little label under each: "Regular" and "Goofy." Neither is wrong.]
+
+*You need to figure out which foot goes in front.
 
 **Regular** means your left foot is forward. **Goofy** means your right foot is forward. Neither one is better or worse. "Goofy" is not an insult. (Well, it might be in other contexts, but not here.)
 
@@ -295,7 +299,9 @@ Lean a little toward your toes. Lean a little toward your heels. Feel how the bo
 
 **STEP 4: Practice Getting On and Off.**
 
-Step on. Step off. Step on again. Get comfortable with the motion. Know where your feet go without looking. This is going to become automatic, but right now you're building the muscle memory.Spend at least 10 minutes doing this. I know it doesn't feel like "real" skateboarding. But you know what else doesn't feel like real skateboarding? Falling off in the first three seconds because you weren't comfortable on the board.
+Step on. Step off. Step on again. Get comfortable with the motion. Know where your feet go without looking. This is going to become automatic, but right now you're building the muscle memory.
+
+Spend at least 10 minutes doing this. I know it doesn't feel like "real" skateboarding. But you know what else doesn't feel like real skateboarding? Falling off in the first three seconds because you weren't comfortable on the board.
 
 > A note for parents: This is a great time to just be present and encouraging. "You look solid up there" is a good thing to say. "Let me get a video!" is also a good thing to say. "Why aren't you moving yet?" is not.
 `,
@@ -341,7 +347,9 @@ The goal is to land on the big, padded, fleshy parts of your body (thighs, butt,
 
 If you're wearing hard-shell knee pads (and you are, because you read Chapter 2), you can drop to your knees and slide. This is how bowl and ramp skaters bail out of tricks. It looks dramatic and it works. Here's how to practice:
 
-*[Baby Skate Bunny doing a dramatic knee slide on a smooth surface. Dust clouds behind her. Knee pads gleaming. Jay watching from the side with wide eyes, impressed. Speed lines.]*On a smooth surface (a garage, a basketball court, a kitchen floor if your parents are out and the floor is clean), put on your knee pads. Walk forward. Drop to your knees and slide. That's it. Practice it until it feels natural. The goal is to make this your default bail-out move when things go wrong.
+*[Baby Skate Bunny doing a dramatic knee slide on a smooth surface. Dust clouds behind her. Knee pads gleaming. Jay watching from the side with wide eyes, impressed. Speed lines.]
+
+*On a smooth surface (a garage, a basketball court, a kitchen floor if your parents are out and the floor is clean), put on your knee pads. Walk forward. Drop to your knees and slide. That's it. Practice it until it feels natural. The goal is to make this your default bail-out move when things go wrong.
 `,
     "14-ch-4-how-to-fall-rule-5-practice.md": `---
 label: "Ch 4 — How to Fall (rule 5 + practice)"
@@ -362,7 +370,9 @@ Get on the grass again. Put on all your gear. Now:
 
 **3. Practice the knee slide.** On a smooth surface, walk and drop. Ten times.
 
-**4. Practice running off the board.** On the grass, stand on your board, then step forward and jog a few steps. Ten times.This is going to feel ridiculous. You are a person deliberately falling down on a lawn. But every professional skateboarder has done this. Every single one. The ones who didn't practice falling are the ones who stopped skating because they got hurt.
+**4. Practice running off the board.** On the grass, stand on your board, then step forward and jog a few steps. Ten times.
+
+This is going to feel ridiculous. You are a person deliberately falling down on a lawn. But every professional skateboarder has done this. Every single one. The ones who didn't practice falling are the ones who stopped skating because they got hurt.
 
 > A note for parents: Falling practice is one of the most valuable things you can do with your kid. Do it with them. Fall down on the grass together. Laugh about it. Make it fun. If they see you doing it, it's not embarrassing—it's just what you do.
 `,
@@ -394,7 +404,9 @@ Find a smooth, flat surface. A tennis court, an empty parking lot, a wide sidewa
 
 **PUSHING**
 
-*[Baby Skate Bunny pushing off, one foot on the board, one foot on the ground. Wind lines behind her ears. Squirrel rolling alongside looking thrilled, mouth open. Cream background.]*Your front foot goes on the board, angled forward, toes pointing roughly toward the nose. (Later, you'll rotate it sideways. For now, forward.)
+*[Baby Skate Bunny pushing off, one foot on the board, one foot on the ground. Wind lines behind her ears. Squirrel rolling alongside looking thrilled, mouth open. Cream background.]
+
+*Your front foot goes on the board, angled forward, toes pointing roughly toward the nose. (Later, you'll rotate it sideways. For now, forward.)
 
 Your back foot pushes off the ground, like you're riding a scooter. Short, gentle pushes. You don't need speed. You need control.
 
@@ -432,11 +444,15 @@ page: 19
 
 **TURNING**
 
-*[Baby Skate Bunny carving a big lazy S-turn, looking relaxed and happy. Dotted line behind showing the S-path. A couple of orange cones in the background.]*Remember how we leaned on the grass? Same thing, but now you're rolling.
+*[Baby Skate Bunny carving a big lazy S-turn, looking relaxed and happy. Dotted line behind showing the S-path. A couple of orange cones in the background.]
+
+*Remember how we leaned on the grass? Same thing, but now you're rolling.
 
 Lean your toes and the board curves one way. Lean your heels and it curves the other. These are called **carving turns** and they are how you steer.
 
-Start with big, wide, lazy turns. You are not slalom skiing. You are gently suggesting to the board that maybe, perhaps, if it's not too much trouble, it might go a little bit to the left.As you get more comfortable, your turns will get sharper. But for now: gentle.
+Start with big, wide, lazy turns. You are not slalom skiing. You are gently suggesting to the board that maybe, perhaps, if it's not too much trouble, it might go a little bit to the left.
+
+As you get more comfortable, your turns will get sharper. But for now: gentle.
 
 > A note for parents: Your job during first rides is to be a calm presence. Stand nearby. Resist the urge to hover or grab them. If they fall, wait a beat—let them decide if they need help. Say "nice!" a lot. Mean it.
 `,
@@ -512,8 +528,10 @@ page: 21
 
 • Riding switch (with your other foot forward—this will feel like
 starting over, and that's okay)
+
 • Manuals (balancing on just the back wheels while rolling—start with
 one second, then two)
+
 • Tic-tacs (quick left-right kickturns to build speed without pushing)
 `,
     "21-ch-6-practice-plan-week-9.md": `---
@@ -527,7 +545,9 @@ If you've done all the above, you are ready to start learning your first real tr
 
 The ollie is skateboarding's foundational trick. It's how you jump with the board. Its inventor, Alan "Ollie" Gelfand, actually stumbled onto it by accident in the late 1970s while skating a poorly built pool in Florida—and it took the skateboarding world years to fully understand and adapt it. Rodney Mullen later figured out how to do it on flat ground. Learning to ollie will take you weeks of practice. This is normal.
 
-*[Baby Skate Bunny mid-ollie, board in the air under her feet, ears flying up, looking surprised and delighted. The critters below looking up with star-eyes and open mouths. This is the aspirational image.]*But that's another chapter for another day. (Or another book. One that will definitely contain diagrams and probably more jokes about gravity.)
+*[Baby Skate Bunny mid-ollie, board in the air under her feet, ears flying up, looking surprised and delighted. The critters below looking up with star-eyes and open mouths. This is the aspirational image.]
+
+*But that's another chapter for another day. (Or another book. One that will definitely contain diagrams and probably more jokes about gravity.)
 
 > A note for parents: Progress is not linear. Some days they'll look amazing. Some days they'll look like they've never seen a skateboard before. Both are normal. Both are part of the process. Keep showing up.
 `,
@@ -577,7 +597,9 @@ page: 24
 
 **SEE A DOCTOR if:** There's visible deformity. Pain is severe and not improving. You can't put weight on something. You hit your head hard. Any head injury symptom persists.
 
-*[Two panels side by side. Left: Kitty with a bandaid on her elbow, getting back on the board, small determined smile. Right: Duck sitting on a bench with an ice pack on his ankle, watching the others skate, content to wait. Both are okay. Both are labeled.]*This is not being dramatic. This is being smart. Skateboarders who ignore injuries become ex-skateboarders.
+*[Two panels side by side. Left: Kitty with a bandaid on her elbow, getting back on the board, small determined smile. Right: Duck sitting on a bench with an ice pack on his ankle, watching the others skate, content to wait. Both are okay. Both are labeled.]
+
+*This is not being dramatic. This is being smart. Skateboarders who ignore injuries become ex-skateboarders.
 
 **WHEN YOU FEEL DEFEATED**
 
@@ -600,7 +622,9 @@ page: 25
 
 **THE FEAR**
 
-*[Kitty peeking out from behind a ramp at the skatepark, big hopeful eyes, paws clasped together. Baby Skate Bunny on her board nearby, patient, one paw extended. Not pushing. Just offering.]*Fear in skateboarding is real and it is useful.
+*[Kitty peeking out from behind a ramp at the skatepark, big hopeful eyes, paws clasped together. Baby Skate Bunny on her board nearby, patient, one paw extended. Not pushing. Just offering.]
+
+*Fear in skateboarding is real and it is useful.
 
 Fear is your brain saying: "Hey, are you sure about this? Have you thought this through? Do you have the skills for this yet?"
 
@@ -610,7 +634,9 @@ Sometimes the answer is: "Actually, no, I need more practice." And you go back t
 
 Fear is not weakness. Ignoring fear is not bravery. Real bravery is *listening to the fear, making an informed decision, and acting accordingly.*
 
-Sometimes bravery means dropping in. Sometimes bravery means walking away and coming back with more preparation.Both count.
+Sometimes bravery means dropping in. Sometimes bravery means walking away and coming back with more preparation.
+
+Both count.
 
 > A note for parents: When your kid has a hard fall or a hard day, resist the urge to fix it. Don't say "You're fine" (they might not be). Don't say "Get back on" (they'll decide when). Do say: "That looked rough. How are you feeling?" Do say: "I'm proud of you for trying." Do say: "Ice cream?" (Ice cream is almost always appropriate.)
 `,
@@ -661,7 +687,9 @@ page: 29
 
 **RULE 4: BEGINNERS ARE WELCOME.** If you feel like you don't belong, you're wrong. Every single person at that park was a beginner once. Most skaters are friendly and happy to help. But do go during off-peak hours at first—early mornings and weekdays are usually quieter.
 
-**RULE 5: PICK UP AFTER YOURSELF.** Water bottles, snack wrappers, broken pieces of board. Leave the park better than you found it.**RULE 6: ENCOURAGE OTHERS.** See someone land something? A quick "nice!" or even just a nod goes a long way. The skateboarding community is built on hype. Be part of it.
+**RULE 5: PICK UP AFTER YOURSELF.** Water bottles, snack wrappers, broken pieces of board. Leave the park better than you found it.
+
+**RULE 6: ENCOURAGE OTHERS.** See someone land something? A quick "nice!" or even just a nod goes a long way. The skateboarding community is built on hype. Be part of it.
 
 > A note for parents: If you're at the park watching, please don't hover in the skating area. Find a spot to sit that's out of the flow. And if an older skater gives your kid a tip, that's not a stranger being weird—that's skateboard culture. It's how knowledge gets passed down.
 `,

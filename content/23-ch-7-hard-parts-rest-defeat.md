@@ -11,7 +11,9 @@ page: 24
 
 **SEE A DOCTOR if:** There's visible deformity. Pain is severe and not improving. You can't put weight on something. You hit your head hard. Any head injury symptom persists.
 
-*[Two panels side by side. Left: Kitty with a bandaid on her elbow, getting back on the board, small determined smile. Right: Duck sitting on a bench with an ice pack on his ankle, watching the others skate, content to wait. Both are okay. Both are labeled.]*This is not being dramatic. This is being smart. Skateboarders who ignore injuries become ex-skateboarders.
+*[Two panels side by side. Left: Kitty with a bandaid on her elbow, getting back on the board, small determined smile. Right: Duck sitting on a bench with an ice pack on his ankle, watching the others skate, content to wait. Both are okay. Both are labeled.]
+
+*This is not being dramatic. This is being smart. Skateboarders who ignore injuries become ex-skateboarders.
 
 **WHEN YOU FEEL DEFEATED**
 

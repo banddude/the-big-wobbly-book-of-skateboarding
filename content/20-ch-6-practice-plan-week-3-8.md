@@ -33,6 +33,8 @@ page: 21
 
 • Riding switch (with your other foot forward—this will feel like
 starting over, and that's okay)
+
 • Manuals (balancing on just the back wheels while rolling—start with
 one second, then two)
+
 • Tic-tacs (quick left-right kickturns to build speed without pushing)

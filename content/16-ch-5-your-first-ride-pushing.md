@@ -13,7 +13,9 @@ Find a smooth, flat surface. A tennis court, an empty parking lot, a wide sidewa
 
 **PUSHING**
 
-*[Baby Skate Bunny pushing off, one foot on the board, one foot on the ground. Wind lines behind her ears. Squirrel rolling alongside looking thrilled, mouth open. Cream background.]*Your front foot goes on the board, angled forward, toes pointing roughly toward the nose. (Later, you'll rotate it sideways. For now, forward.)
+*[Baby Skate Bunny pushing off, one foot on the board, one foot on the ground. Wind lines behind her ears. Squirrel rolling alongside looking thrilled, mouth open. Cream background.]
+
+*Your front foot goes on the board, angled forward, toes pointing roughly toward the nose. (Later, you'll rotate it sideways. For now, forward.)
 
 Your back foot pushes off the ground, like you're riding a scooter. Short, gentle pushes. You don't need speed. You need control.
 
