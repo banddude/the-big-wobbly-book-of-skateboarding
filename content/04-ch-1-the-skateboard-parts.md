@@ -3,7 +3,7 @@ label: "Ch 1 — The Skateboard (parts)"
 page: 5
 ---
 
-**THE DECK** is the flat wooden part you stand on. It is made of layers of maple wood pressed together, which is called "ply." Most decks are 7-ply. It is strong. It has to be. It is going to hold you, your hopes, and your dreams. (And occasionally your backside, after you fall on it.)
+**THE DECK** is the flat wooden part you stand on. It is made of layers of maple wood pressed together, which is called "ply." Most decks are 7-ply. It is strong. It has to be. It is going to hold you, your hopes, and your dreams. (And occasionally your backside, after you fall on it.) The front end is called the nose and the back end is called the tail.
 
 **THE GRIP TAPE** is the sandpapery stuff on top of the deck. It keeps your feet from sliding off. It will also destroy your shoes. This is normal. This is expected. Shoe companies are aware of this. It is a whole economy.
 
@@ -13,10 +13,6 @@ page: 5
 
 **THE BEARINGS** are inside the wheels and make them spin. You don't need to know much about them right now except: keep them dry. Water is the enemy of bearings. Water is the enemy of skateboarding in general. Rain is skateboarding's villain origin story.
 
-**THE NOSE** is the front of the board. The nose is usually a little wider and steeper.
-
-**THE TAIL** is the back. The tail is usually a little narrower and less steep.
-
-How do you tell them apart? Look at the graphic on the bottom. The top of the picture faces the nose. If there's no graphic, look for the slightly wider, slightly steeper end—that's the nose.
+**THE HARDWARE** is the set of nuts and bolts that hold the trucks onto the deck. There are eight of them. They are small, they are mighty, and they are absolutely going to disappear into the carpet the second you drop one.
 
 *[Turtle sniffing the nose of a skateboard. Literally. Because it's called the nose. Turtle looks curious and slightly confused.]*
