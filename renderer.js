@@ -67,19 +67,6 @@ function markdownToHtml(md) {
     // Skip empty lines
     if (line.trim() === '') { i++; continue; }
 
-    // Pullquote (poem-styled callout) - lines starting with ~~
-    if (line.trimStart().startsWith('~~')) {
-      let block = line.replace(/^\s*~~\s?/, '');
-      i++;
-      while (i < lines.length && lines[i].trim() !== '' && !lines[i].trimStart().startsWith('>')) {
-        block += ' ' + lines[i];
-        i++;
-      }
-      block = inlineFormat(block.trim());
-      htmlParts.push('<div class="pullquote">' + block + '</div>');
-      continue;
-    }
-
     // Blockquote (parent note) - collect consecutive > lines
     if (line.trimStart().startsWith('>')) {
       let block = '';
