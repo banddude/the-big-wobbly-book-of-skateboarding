@@ -8,7 +8,7 @@ img_size: 25
 
 **CHAPTER 2**
 
-*SAFETY GEAR: THE STUFF BETWEEN YOU AND THE CONCRETE*
+*SAFETY GEAR: THE STUFF BETWEEN YOU AND<br>THE CONCRETE*
 
 I know.
 
@@ -16,7 +16,7 @@ I know.
 
 You want to skip this chapter.
 
-I can feel it. You're looking at your board. You're looking at this chapter about gear. You're thinking: "Can I just go ride?"
+I can feel it. You're looking at your<br>board. You're looking at this chapter about gear. You're thinking: "Can I just go ride?"
 
 Not yet. A few more pages. I promise they're important.
 
