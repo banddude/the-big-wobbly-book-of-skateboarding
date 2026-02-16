@@ -232,10 +232,14 @@ function buildPage(section) {
   if (section.img) {
     pg.classList.add('has-overlay-img');
     const imgEl = document.createElement('img');
-    if (window.location.protocol !== 'file:') {
+    // Use embedded base64 data URL if available (avoids CORS issues in Safari)
+    const imgSrc = (typeof CONTENT_DATA !== 'undefined' && CONTENT_DATA.images && CONTENT_DATA.images[section.img])
+      ? CONTENT_DATA.images[section.img]
+      : section.img;
+    if (window.location.protocol !== 'file:' && !imgSrc.startsWith('data:')) {
       imgEl.crossOrigin = 'anonymous';
     }
-    imgEl.src = section.img;
+    imgEl.src = imgSrc;
     imgEl.style.width = '65%';
     imgEl.style.height = '65%';
     imgEl.style.objectFit = 'contain';
@@ -254,22 +258,11 @@ function buildPage(section) {
       // Top images: float with shape-outside for text wrapping around shape
       imgEl.style.float = pos.includes('right') ? 'right' : 'left';
       imgEl.style.position = 'relative';
+      imgEl.style.shapeOutside = 'url(' + imgSrc + ')';
       imgEl.style.shapeMargin = '8px';
       imgEl.style.transform = 'scaleX(-1)';
       imgEl.style.shapeImageThreshold = '0.1';
       imgEl.style.margin = pos.includes('right') ? '-25px -20px 5px 8px' : '-25px 8px 5px -20px';
-      // Convert image to data URL for shape-outside (Safari won't read alpha from external URLs)
-      const shapeImg = new Image();
-      if (window.location.protocol !== 'file:') shapeImg.crossOrigin = 'anonymous';
-      shapeImg.onload = function() {
-        const canvas = document.createElement('canvas');
-        canvas.width = shapeImg.naturalWidth;
-        canvas.height = shapeImg.naturalHeight;
-        canvas.getContext('2d').drawImage(shapeImg, 0, 0);
-        const dataUrl = canvas.toDataURL('image/png');
-        imgEl.style.shapeOutside = 'url(' + dataUrl + ')';
-      };
-      shapeImg.src = section.img;
       // Insert at the top of content
       pg.insertBefore(imgEl, pg.firstChild);
     }
