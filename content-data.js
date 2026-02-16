@@ -492,13 +492,17 @@ page: 21
 
 • Tighter turns
 
-• Riding in a circle, both directions**Your goals:**</p>
+• Riding in a circle, both directions
+
+**Your goals:**
 
 • Ride comfortably at a jogging pace
 
 • Turn sharply enough to avoid an obstacle
 
-• Feel relaxed on the board (you'll know because your shoulders drop)**WEEK 5-8: READY FOR MORE**</p>
+• Feel relaxed on the board (you'll know because your shoulders drop)
+
+**WEEK 5-8: READY FOR MORE**
 
 **Now you can start exploring:**
 
@@ -507,11 +511,9 @@ page: 21
 • Kickturns (lifting the front wheels and pivoting on the back wheels)
 
 • Riding switch (with your other foot forward—this will feel like
-starting over, and that's okay)</p>
-
+starting over, and that's okay)
 • Manuals (balancing on just the back wheels while rolling—start with
-one second, then two)</p>
-
+one second, then two)
 • Tic-tacs (quick left-right kickturns to build speed without pushing)
 `,
     "21-ch-6-practice-plan-week-9.md": `---
