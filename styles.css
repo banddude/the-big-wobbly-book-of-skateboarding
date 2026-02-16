@@ -102,17 +102,6 @@ body { background:#E5DDD5; font-family:'Nunito',sans-serif; color:#3D2C24; paddi
   text-align:center;
 }
 
-/* Drop cap on first paragraph of content pages */
-.pg.has-dropcap > p:first-child::first-letter {
-  font-family:'Fraunces',serif;
-  font-weight:900;
-  float:left;
-  font-size:32px;
-  line-height:0.8;
-  padding-right:5px;
-  padding-top:4px;
-  color:#A0522D;
-}
 
 /* Poems */
 .pg.poem-page {

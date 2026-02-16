@@ -67,6 +67,19 @@ function markdownToHtml(md) {
     // Skip empty lines
     if (line.trim() === '') { i++; continue; }
 
+    // Pullquote (poem-styled callout) - lines starting with ~~
+    if (line.trimStart().startsWith('~~')) {
+      let block = line.replace(/^\s*~~\s?/, '');
+      i++;
+      while (i < lines.length && lines[i].trim() !== '' && !lines[i].trimStart().startsWith('>')) {
+        block += ' ' + lines[i];
+        i++;
+      }
+      block = inlineFormat(block.trim());
+      htmlParts.push('<div class="pullquote">' + block + '</div>');
+      continue;
+    }
+
     // Blockquote (parent note) - collect consecutive > lines
     if (line.trimStart().startsWith('>')) {
       let block = '';
@@ -325,14 +338,6 @@ function buildPage(section) {
   // Remove illustration notes from pages that have actual images
   if (section.bg || section.img || section.type === 'cover' || section.type === 'dedication') {
     pg.querySelectorAll('.il').forEach(el => el.remove());
-  }
-
-  // Drop cap for first page of content sections
-  if (pageNum > 2 && section.type !== 'poem') {
-    const firstP = pg.querySelector('p');
-    if (firstP && !firstP.querySelector('strong') && firstP.textContent.length > 20) {
-      pg.classList.add('has-dropcap');
-    }
   }
 
   return pg;
