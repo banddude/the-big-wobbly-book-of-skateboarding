@@ -295,7 +295,7 @@ function buildPage(section) {
       imgEl.style.float = pos.includes('right') ? 'right' : 'left';
       imgEl.style.position = 'relative';
       imgEl.style.transform = 'scaleX(-1)';
-      imgEl.style.shapeMargin = '8px';
+      imgEl.style.shapeMargin = '5px';
       imgEl.style.margin = pos.includes('right') ? '-25px -20px 5px 8px' : '-25px 8px 5px -20px';
       // Compute polygon from alpha channel once image loads
       const onImgReady = function() {
