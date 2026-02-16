@@ -1,5 +1,41 @@
 // Book renderer: loads markdown content files and renders the book preview
 
+// Compute a polygon from an image's alpha channel for shape-outside
+// Scans each row to find the leftmost opaque pixel, returns polygon points as percentages
+function computeShapePolygon(imgEl, flip) {
+  const canvas = document.createElement('canvas');
+  const w = imgEl.naturalWidth;
+  const h = imgEl.naturalHeight;
+  canvas.width = w;
+  canvas.height = h;
+  const ctx = canvas.getContext('2d');
+  if (flip) {
+    ctx.translate(w, 0);
+    ctx.scale(-1, 1);
+  }
+  ctx.drawImage(imgEl, 0, 0);
+  const data = ctx.getImageData(0, 0, w, h).data;
+  const step = Math.max(1, Math.floor(h / 30)); // ~30 sample rows
+  const points = [];
+  // Scan from top to bottom, find leftmost opaque pixel per row
+  for (let y = 0; y < h; y += step) {
+    let leftmost = w; // default to right edge (fully transparent row)
+    for (let x = 0; x < w; x++) {
+      if (data[(y * w + x) * 4 + 3] > 20) { // alpha > 20
+        leftmost = x;
+        break;
+      }
+    }
+    points.push({ x: (leftmost / w) * 100, y: (y / h) * 100 });
+  }
+  // Close the polygon: go down the right side and back up
+  points.push({ x: (points[points.length - 1].x), y: 100 });
+  points.push({ x: 100, y: 100 });
+  points.push({ x: 100, y: 0 });
+  points.push({ x: (points[0].x), y: 0 });
+  return 'polygon(' + points.map(p => p.x.toFixed(1) + '% ' + p.y.toFixed(1) + '%').join(', ') + ')';
+}
+
 const CONTENT_DIR = 'content/';
 const COVER_IMG = 'assets/cover.jpg';
 const DED_IMG = 'assets/dedication.jpg';
@@ -255,14 +291,23 @@ function buildPage(section) {
       else imgEl.style.left = '8px';
       pg.appendChild(imgEl);
     } else {
-      // Top images: float with shape-outside for text wrapping around shape
+      // Top images: float with shape-outside polygon for text wrapping
       imgEl.style.float = pos.includes('right') ? 'right' : 'left';
       imgEl.style.position = 'relative';
-      imgEl.style.shapeOutside = 'url(' + imgSrc + ')';
-      imgEl.style.shapeMargin = '8px';
       imgEl.style.transform = 'scaleX(-1)';
-      imgEl.style.shapeImageThreshold = '0.1';
+      imgEl.style.shapeMargin = '8px';
       imgEl.style.margin = pos.includes('right') ? '-25px -20px 5px 8px' : '-25px 8px 5px -20px';
+      // Compute polygon from alpha channel once image loads
+      const onImgReady = function() {
+        try {
+          const poly = computeShapePolygon(imgEl, true);
+          imgEl.style.shapeOutside = poly;
+        } catch(e) {
+          // Fallback: no shape wrapping, just rectangular float
+        }
+      };
+      if (imgEl.complete && imgEl.naturalWidth) onImgReady();
+      else imgEl.onload = onImgReady;
       // Insert at the top of content
       pg.insertBefore(imgEl, pg.firstChild);
     }
