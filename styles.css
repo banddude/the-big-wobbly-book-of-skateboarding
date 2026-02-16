@@ -118,6 +118,16 @@ body { background:#E5DDD5; font-family:'Nunito',sans-serif; color:#3D2C24; paddi
   color:#6B5A8A;
 }
 
+/* Pullquote (poem-styled inline callout) */
+.pullquote {
+  text-align:center;
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  color:#6B5A8A;
+  margin:8px 10px;
+  line-height:1.6;
+}
+
 /* Below page: number + illustration descriptions */
 .page-footer {
   max-width:380px;
