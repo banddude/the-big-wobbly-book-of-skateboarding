@@ -1,5 +1,6 @@
 const CONTENT_DATA = {
   manifest: [
+    "98-spine.md",
     "00-cover.md",
     "02-a-note-before-we-begin.md",
     "01-dedication.md",
@@ -19,9 +20,6 @@ const CONTENT_DATA = {
     "16-ch-5-your-first-ride-pushing.md",
     "17-ch-5-your-first-ride-stopping.md",
     "18-ch-5-your-first-ride-turning.md",
-    "19-ch-6-practice-plan-week-1-2.md",
-    "20-ch-6-practice-plan-week-3-8.md",
-    "21-ch-6-practice-plan-week-9.md",
     "22-ch-7-hard-parts-falls.md",
     "23-ch-7-hard-parts-rest-defeat.md",
     "24-ch-7-hard-parts-fear.md",
@@ -29,14 +27,29 @@ const CONTENT_DATA = {
     "26-ch-8-skatepark-etiquette-opener.md",
     "26-ch-8-skatepark-etiquette-rules-1-3.md",
     "27-ch-8-skatepark-etiquette-rules-4-6.md",
-    "28-ch-9-for-parents-support.md",
-    "29-ch-9-for-parents-pace-poem.md",
     "30-ch-10-the-end-prose.md",
     "31-ch-10-the-end-poem-finale.md",
+    "28-ch-9-for-parents-support.md",
+    "29-ch-9-for-parents-pace-poem.md",
     "32-appendix-first-aid-scrapessprains.md",
-    "33-appendix-first-aid-headfractures.md"
+    "33-appendix-first-aid-headfractures.md",
+    "19-ch-6-practice-plan-week-1-2.md",
+    "20-ch-6-practice-plan-week-3-8.md",
+    "21-ch-6-practice-plan-week-9.md",
+    "99-back-cover.md"
   ],
   files: {
+    "98-spine.md": `---
+label: Spine
+type: spine
+---
+
+The Big Wobbly Book of Skateboarding
+
+by Mike Shaffer
+
+Publisher: [TBD]
+`,
     "00-cover.md": `---
 label: Cover
 page: 1
@@ -456,101 +469,6 @@ As you get more comfortable, your turns will get sharper. But for now: gentle.
 
 > A note for parents: Your job during first rides is to be a calm presence. Stand nearby. Resist the urge to hover or grab them. If they fall, wait a beat—let them decide if they need help. Say "nice!" a lot. Mean it.
 `,
-    "19-ch-6-practice-plan-week-1-2.md": `---
-label: "Ch 6 — Practice Plan (week 1-2)"
-page: 20
----
-
-**CHAPTER 6**
-
-*THE PRACTICE PLAN: WHAT TO DO AND WHEN TO DO IT*
-
-Here's the thing nobody tells you: skateboarding is not a sport you get good at quickly. It's a sport you get good at consistently.
-
-Fifteen minutes a day beats two hours once a week. Your body needs repetition. Your brain needs repetition. Your courage needs repetition.
-
-Here is a practice plan. Follow it, adjust it, make it yours. But follow something.
-
-*[Baby Skate Bunny holding a little clipboard with checkmarks on it. In the background, critters practicing different things — Squirrel pushing, Duck turning, Kitty just standing on a board looking proud of herself, Turtle slowly rolling.]*
-
-**WEEK 1-2: THE BASICS**
-
-**Every session should include:**
-
-• 5 minutes of falling practice (even on days you don't feel like it)
-
-• Pushing and riding in a straight line
-
-• Stopping (foot brake, step-off)
-
-• Gentle turns in both directions
-
-**Your goals:**
-
-• Push and ride 50 feet without stepping off
-
-• Stop on purpose within a few feet of where you intend
-
-• Make S-turns without feeling like you're about to die
-`,
-    "20-ch-6-practice-plan-week-3-8.md": `---
-label: "Ch 6 — Practice Plan (week 3-8)"
-page: 21
----
-
-**WEEK 3-4: BUILDING CONFIDENCE**
-
-**Add to your sessions:**
-
-• Riding over small cracks and bumps (weight forward, knees bent)
-
-• Faster pushes and longer rides
-
-• Tighter turns
-
-• Riding in a circle, both directions
-
-**Your goals:**
-
-• Ride comfortably at a jogging pace
-
-• Turn sharply enough to avoid an obstacle
-
-• Feel relaxed on the board (you'll know because your shoulders drop)
-
-**WEEK 5-8: READY FOR MORE**
-
-**Now you can start exploring:**
-
-• Riding up and down gentle slopes (GENTLE. I said GENTLE.)
-
-• Kickturns (lifting the front wheels and pivoting on the back wheels)
-
-• Riding switch (with your other foot forward—this will feel like
-starting over, and that's okay)
-
-• Manuals (balancing on just the back wheels while rolling—start with
-one second, then two)
-
-• Tic-tacs (quick left-right kickturns to build speed without pushing)
-`,
-    "21-ch-6-practice-plan-week-9.md": `---
-label: "Ch 6 — Practice Plan (week 9+)"
-page: 22
----
-
-**WEEK 9+: THE TRICK DOOR**
-
-If you've done all the above, you are ready to start learning your first real trick: **the ollie.**
-
-The ollie is skateboarding's foundational trick. It's how you jump with the board. Its inventor, Alan "Ollie" Gelfand, actually stumbled onto it by accident in the late 1970s while skating a poorly built pool in Florida—and it took the skateboarding world years to fully understand and adapt it. Rodney Mullen later figured out how to do it on flat ground. Learning to ollie will take you weeks of practice. This is normal.
-
-*[Baby Skate Bunny mid-ollie, board in the air under her feet, ears flying up, looking surprised and delighted. The critters below looking up with star-eyes and open mouths. This is the aspirational image.]*
-
-But that's another chapter for another day. (Or another book. One that will definitely contain diagrams and probably more jokes about gravity.)
-
-> A note for parents: Progress is not linear. Some days they'll look amazing. Some days they'll look like they've never seen a skateboard before. Both are normal. Both are part of the process. Keep showing up.
-`,
     "22-ch-7-hard-parts-falls.md": `---
 label: "Ch 7 — Hard Parts (falls)"
 page: 23
@@ -693,48 +611,6 @@ page: 29
 
 > A note for parents: If you're at the park watching, please don't hover in the skating area. Find a spot to sit that's out of the flow. And if an older skater gives your kid a tip, that's not a stranger being weird—that's skateboard culture. It's how knowledge gets passed down.
 `,
-    "28-ch-9-for-parents-support.md": `---
-label: "Ch 9 — For Parents (support)"
-page: 30
----
-
-**CHAPTER 9**
-
-*A VERY BRIEF CHAPTER FOR PARENTS AND GUARDIANS*
-
-Hello, grown-ups.
-
-Your child wants to skateboard, and you are nervous. This is reasonable. Skateboarding involves concrete and gravity and your child is made of soft, breakable materials that you love very much.
-
-Here are some things I want you to know.
-
-*[A bigger Turtle (parent) sitting on a bench at the skatepark with a first aid kit and a slightly worried expression. Baby Turtle on a board nearby, having the absolute time of its life, tiny legs out, huge smile. The parent turtle is trying very hard to be calm.]*
-
-**Skateboarding is genuinely good for kids.** It builds balance, coordination, persistence, resilience, creativity, and problem-solving skills. It teaches them to assess risk, manage fear, and get back up after failure. These are not just sports skills. These are life skills.
-
-**You don't have to understand skateboarding to support it.** You don't need to know what a kickflip is. You need to show up, pay attention, and care. Drive them to the park. Sit and watch. Ask them to teach you something. (They will love this.)
-
-**Let them fail.** This is the hardest one. Every instinct in your body will tell you to prevent the fall, catch them, make it easier. But the falls are the point. The struggle is the point. Your job is to make sure they're safe enough to fail—helmet, pads, appropriate terrain—and then let them fail.
-
-**Celebrate effort, not outcomes.** "You tried that ten times, that's awesome" is better than "Why didn't you land it?" Every attempt is a success. Every fall is data.
-`,
-    "29-ch-9-for-parents-pace-poem.md": `---
-label: "Ch 9 — For Parents (pace + poem)"
-page: 31
----
-
-**Respect their pace.** They might be cautious. They might be fearless. Neither is wrong. Don't push the cautious kid to go faster, and don't hold back the fearless kid (just make sure they're geared up). They'll find their own speed.
-
-**It's okay if they quit and come back.** Some kids skate for two weeks, stop for six months, and then pick it back up. That's not failure. That's normal. Keep the board. They'll come back.
-
-*Watching your kid on a skateboard is hard.*
-*Your heart's in your throat the whole time.*
-*But look at their face.*
-*LOOK at their face.*
-*That joy is worth every dime.*
-
-*[Close-up of Baby Skate Bunny's face mid-ride: eyes squeezed shut with joy, mouth in a huge grin, ears streaming back in the wind. Pure happiness. This is the face the poem is talking about.]*
-`,
     "30-ch-10-the-end-prose.md": `---
 label: "Ch 10 — The End (prose)"
 page: 32
@@ -808,6 +684,48 @@ type: poem
 
 *(Now go skateboard.)*
 `,
+    "28-ch-9-for-parents-support.md": `---
+label: "Ch 9 — For Parents (support)"
+page: 30
+---
+
+**CHAPTER 9**
+
+*A VERY BRIEF CHAPTER FOR PARENTS AND GUARDIANS*
+
+Hello, grown-ups.
+
+Your child wants to skateboard, and you are nervous. This is reasonable. Skateboarding involves concrete and gravity and your child is made of soft, breakable materials that you love very much.
+
+Here are some things I want you to know.
+
+*[A bigger Turtle (parent) sitting on a bench at the skatepark with a first aid kit and a slightly worried expression. Baby Turtle on a board nearby, having the absolute time of its life, tiny legs out, huge smile. The parent turtle is trying very hard to be calm.]*
+
+**Skateboarding is genuinely good for kids.** It builds balance, coordination, persistence, resilience, creativity, and problem-solving skills. It teaches them to assess risk, manage fear, and get back up after failure. These are not just sports skills. These are life skills.
+
+**You don't have to understand skateboarding to support it.** You don't need to know what a kickflip is. You need to show up, pay attention, and care. Drive them to the park. Sit and watch. Ask them to teach you something. (They will love this.)
+
+**Let them fail.** This is the hardest one. Every instinct in your body will tell you to prevent the fall, catch them, make it easier. But the falls are the point. The struggle is the point. Your job is to make sure they're safe enough to fail—helmet, pads, appropriate terrain—and then let them fail.
+
+**Celebrate effort, not outcomes.** "You tried that ten times, that's awesome" is better than "Why didn't you land it?" Every attempt is a success. Every fall is data.
+`,
+    "29-ch-9-for-parents-pace-poem.md": `---
+label: "Ch 9 — For Parents (pace + poem)"
+page: 31
+---
+
+**Respect their pace.** They might be cautious. They might be fearless. Neither is wrong. Don't push the cautious kid to go faster, and don't hold back the fearless kid (just make sure they're geared up). They'll find their own speed.
+
+**It's okay if they quit and come back.** Some kids skate for two weeks, stop for six months, and then pick it back up. That's not failure. That's normal. Keep the board. They'll come back.
+
+*Watching your kid on a skateboard is hard.*
+*Your heart's in your throat the whole time.*
+*But look at their face.*
+*LOOK at their face.*
+*That joy is worth every dime.*
+
+*[Close-up of Baby Skate Bunny's face mid-ride: eyes squeezed shut with joy, mouth in a huge grin, ears streaming back in the wind. Pure happiness. This is the face the poem is talking about.]*
+`,
     "32-appendix-first-aid-scrapessprains.md": `---
 label: "Appendix — First Aid (urgent)"
 page: 34
@@ -869,6 +787,128 @@ Ice for 15-20 minutes, wrapped in a cloth. Rest. They will turn purple, then gre
 Drink water before you skate, while you skate, and after you skate. If you feel dizzy, nauseous, or your skin gets hot and stops sweating, get into the shade immediately and drink water. Heat exhaustion is real and it sneaks up on you, especially when you are having fun and not paying attention. Take breaks. Find shade. Bring a water bottle. This is not optional.
 
 *When in doubt: rest, ice, and a grown-up's opinion. Your body is not replaceable. Your skateboard is.*
+`,
+    "19-ch-6-practice-plan-week-1-2.md": `---
+label: "Ch 6 — Practice Plan (week 1-2)"
+page: 20
+---
+
+**CHAPTER 6**
+
+*THE PRACTICE PLAN: WHAT TO DO AND WHEN TO DO IT*
+
+Here's the thing nobody tells you: skateboarding is not a sport you get good at quickly. It's a sport you get good at consistently.
+
+Fifteen minutes a day beats two hours once a week. Your body needs repetition. Your brain needs repetition. Your courage needs repetition.
+
+Here is a practice plan. Follow it, adjust it, make it yours. But follow something.
+
+*[Baby Skate Bunny holding a little clipboard with checkmarks on it. In the background, critters practicing different things — Squirrel pushing, Duck turning, Kitty just standing on a board looking proud of herself, Turtle slowly rolling.]*
+
+**WEEK 1-2: THE BASICS**
+
+**Every session should include:**
+
+• 5 minutes of falling practice (even on days you don't feel like it)
+
+• Pushing and riding in a straight line
+
+• Stopping (foot brake, step-off)
+
+• Gentle turns in both directions
+
+**Your goals:**
+
+• Push and ride 50 feet without stepping off
+
+• Stop on purpose within a few feet of where you intend
+
+• Make S-turns without feeling like you're about to die
+`,
+    "20-ch-6-practice-plan-week-3-8.md": `---
+label: "Ch 6 — Practice Plan (week 3-8)"
+page: 21
+---
+
+**WEEK 3-4: BUILDING CONFIDENCE**
+
+**Add to your sessions:**
+
+• Riding over small cracks and bumps (weight forward, knees bent)
+
+• Faster pushes and longer rides
+
+• Tighter turns
+
+• Riding in a circle, both directions
+
+**Your goals:**
+
+• Ride comfortably at a jogging pace
+
+• Turn sharply enough to avoid an obstacle
+
+• Feel relaxed on the board (you'll know because your shoulders drop)
+
+**WEEK 5-8: READY FOR MORE**
+
+**Now you can start exploring:**
+
+• Riding up and down gentle slopes (GENTLE. I said GENTLE.)
+
+• Kickturns (lifting the front wheels and pivoting on the back wheels)
+
+• Riding switch (with your other foot forward—this will feel like
+starting over, and that's okay)
+
+• Manuals (balancing on just the back wheels while rolling—start with
+one second, then two)
+
+• Tic-tacs (quick left-right kickturns to build speed without pushing)
+`,
+    "21-ch-6-practice-plan-week-9.md": `---
+label: "Ch 6 — Practice Plan (week 9+)"
+page: 22
+---
+
+**WEEK 9+: THE TRICK DOOR**
+
+If you've done all the above, you are ready to start learning your first real trick: **the ollie.**
+
+The ollie is skateboarding's foundational trick. It's how you jump with the board. Its inventor, Alan "Ollie" Gelfand, actually stumbled onto it by accident in the late 1970s while skating a poorly built pool in Florida—and it took the skateboarding world years to fully understand and adapt it. Rodney Mullen later figured out how to do it on flat ground. Learning to ollie will take you weeks of practice. This is normal.
+
+*[Baby Skate Bunny mid-ollie, board in the air under her feet, ears flying up, looking surprised and delighted. The critters below looking up with star-eyes and open mouths. This is the aspirational image.]*
+
+But that's another chapter for another day. (Or another book. One that will definitely contain diagrams and probably more jokes about gravity.)
+
+> A note for parents: Progress is not linear. Some days they'll look amazing. Some days they'll look like they've never seen a skateboard before. Both are normal. Both are part of the process. Keep showing up.
+`,
+    "99-back-cover.md": `---
+label: Back Cover
+type: back-cover
+---
+
+**They told you it would be easy. They lied.**
+
+But they also told you it would be fun, and that part is absolutely true. This is the book that teaches real kids real skateboarding, one wobbly push at a time, with safety gear, stubbornness, and a squad of forest critters who believe in you.
+
+*However wobbly, you belong.*
+
+**What's inside:** A genuinely useful guide to skateboarding for young beginners and the grown-ups who love them. Real technique, real safety information, real practice plans, and real encouragement, all wrapped in humor and illustrated with the world's most supportive forest critters. Because learning to skateboard is hard, and hard things are better when someone makes you laugh.
+
+Ages 5-10
+
+Children's / Sports & Recreation
+
+by Mike Shaffer
+
+ISBN: [TBD]
+
+Price: [TBD]
+
+Publisher: [TBD]
+
+*[Back cover illustration: The whole crew, Baby Skate Bunny, Squirrel, Kitty, Duck, Turtle, and Jay, sitting together on the edge of a ramp at sunset, boards beside them, looking out at the sky. Tired, happy, scraped up. A good day. Small clouds in warm colors.]*
 `
   },
   images: {

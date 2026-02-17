@@ -169,22 +169,59 @@ body { background:#E5DDD5; font-family:'Nunito',sans-serif; color:#3D2C24; paddi
 .pg.cover {
   padding:0;
   background-size:cover;
-  background-position:center bottom;
+  background-position:right center;
   overflow:hidden;
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
 }
+/* In cover wrap, cover is wider to include spine area */
+.cover-wrap .pg.cover {
+  width:420px;
+  border-radius:0 3px 3px 0;
+}
 .pg.cover::before, .pg.cover::after { display:none; }
 .pg.cover .cover-text {
   padding:18px 20px 12px;
   text-align:center;
+  margin-left:40px;
 }
 .pg.cover .cover-text h1 {
   font-family:'Fraunces',serif; font-weight:900; font-size:16px; line-height:1.15; margin-bottom:2px;
 }
 .pg.cover .cover-text .sub {
   font-family:'Fraunces',serif; font-style:italic; font-size:8.5px; color:#7A6B63;
+}
+/* Spine text overlay on left 40px of cover */
+.pg.cover .spine-overlay {
+  position:absolute;
+  left:0;
+  top:0;
+  width:40px;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  border-left:1px solid #ccc;
+  border-right:1px solid #ccc;
+  z-index:3;
+}
+.pg.cover .spine-overlay .spine-text {
+  writing-mode:vertical-rl;
+  text-orientation:mixed;
+  transform:rotate(180deg);
+  font-family:'Fraunces',serif;
+  font-size:5.5px;
+  font-weight:900;
+  color:#3D2C24;
+  letter-spacing:1.5px;
+  text-align:center;
+  text-transform:uppercase;
+}
+.pg.cover .spine-overlay .spine-text p {
+  margin:0 3px;
+  color:#3D2C24;
 }
 
 /* Dedication */
@@ -198,6 +235,100 @@ body { background:#E5DDD5; font-family:'Nunito',sans-serif; color:#3D2C24; paddi
 .pg.dedication .ded-text {
   width:60%; padding:24px 20px; text-align:center;
   display:flex; flex-direction:column; justify-content:center; height:100%;
+}
+
+/* Back Cover */
+.pg.back-cover {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:24px 28px;
+  background:#3D2C24;
+  color:#FBF5E5;
+  font-size:9px;
+  line-height:1.6;
+}
+.pg.back-cover .back-cover-text {
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  height:100%;
+}
+.pg.back-cover p {
+  margin-bottom:8px;
+  color:#FBF5E5;
+}
+.pg.back-cover strong {
+  color:#F3D7C7;
+  font-family:'Fraunces',serif;
+}
+.pg.back-cover em {
+  color:#D4A574;
+  font-family:'Fraunces',serif;
+}
+
+/* Parent Epilogue (softer, dedication-like treatment) */
+.pg.parent-epilogue {
+  background:#F5EFE6;
+  font-family:'Fraunces',serif;
+  font-size:9.5px;
+  line-height:1.65;
+  color:#5A4A3A;
+}
+.pg.parent-epilogue strong {
+  color:#6B5A8A;
+  font-weight:700;
+}
+.pg.parent-epilogue em {
+  color:#6B5A8A;
+}
+
+/* Cover Wrap: back cover | spine | front cover */
+.cover-wrap {
+  display:flex;
+  justify-content:center;
+  align-items:stretch;
+  gap:0;
+  margin:0 auto 12px;
+  transition:transform 0.4s cubic-bezier(.25,.46,.45,.94);
+  opacity:0;
+  transform:translateY(8px);
+  animation:page-appear 0.6s ease forwards;
+}
+.cover-wrap:hover { transform:translateY(-2px); }
+
+.cover-wrap .spread-column.left-page .pg {
+  border-radius:3px 0 0 3px;
+  box-shadow: -2px 1px 4px rgba(0,0,0,.10), -3px 6px 16px rgba(0,0,0,.05);
+}
+.cover-wrap .spread-column.right-page .pg {
+  border-radius:0 3px 3px 0;
+  box-shadow: 2px 1px 4px rgba(0,0,0,.10), 3px 6px 16px rgba(0,0,0,.05);
+}
+.cover-wrap:hover .spread-column.left-page .pg {
+  box-shadow: -3px 3px 6px rgba(0,0,0,.12), -4px 10px 24px rgba(0,0,0,.07);
+}
+.cover-wrap:hover .spread-column.right-page .pg {
+  box-shadow: 3px 3px 6px rgba(0,0,0,.12), 4px 10px 24px rgba(0,0,0,.07);
+}
+
+@media (max-width:820px) {
+  .cover-wrap { flex-direction:row; }
+  .cover-wrap .spread-column.left-page .pg,
+  .cover-wrap .spread-column.right-page .pg {
+    border-radius:3px;
+  }
+  .cover-wrap .pg.cover { width:410px; }
+  .pg.cover .spine-overlay { width:30px; }
+  .pg.cover .cover-text { margin-left:30px; }
+}
+@media (max-width:500px) {
+  .cover-wrap .pg.cover { width:min(384px, calc(100vw - 8px)); }
+  .pg.cover .spine-overlay { width:24px; }
+  .pg.cover .spine-overlay .spine-text { font-size:6px; }
+  .pg.cover .cover-text { margin-left:24px; }
 }
 
 /* Fade-in on scroll */

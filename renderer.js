@@ -54,9 +54,16 @@ const CLOUD_BANDS = [
 
 // --- Markdown to HTML ---
 
-function markdownToHtml(md) {
+function markdownToHtml(md, options) {
+  const opts = options || {};
   // Strip illustration notes before parsing (they can span lines and merge with content)
   md = md.replace(/\*\[[\s\S]*?\]\*/g, '');
+  // Strip lines containing only [TBD] placeholders
+  if (opts.hideTBD) {
+    md = md.split('\n').filter(function(line) {
+      return !/\[TBD\]/.test(line);
+    }).join('\n');
+  }
   const lines = md.split('\n');
   const htmlParts = [];
   let i = 0;
@@ -174,16 +181,18 @@ async function loadContentFiles() {
   const sections = await Promise.all(mdFiles.map(async (filename) => {
     const raw = await getFileContent(filename);
     const { meta, body } = parseFrontmatter(raw);
+    const pageType = meta.type || null;
+    const hideTBD = pageType === 'back-cover' || pageType === 'spine';
     return {
       filename,
       label: meta.label || filename,
       page: meta.page || 0,
-      type: meta.type || null,
+      type: pageType,
       bg: meta.bg || null,
       img: meta.img || null,
       img_pos: meta.img_pos || 'bottom-right',
       img_size: meta.img_size || 25,
-      html: markdownToHtml(body)
+      html: markdownToHtml(body, { hideTBD: hideTBD })
     };
   }));
 
@@ -258,12 +267,23 @@ function buildPage(section) {
     pg.classList.add('cover');
     pg.style.backgroundImage = 'url(' + COVER_IMG + ')';
     pg.innerHTML = '<div class="cover-text"><h1>THE<br>BIG WOBBLY BOOK<br>OF<br>SKATEBOARDING</h1><div class="sub">A Real, Actual, Legitimate Guide<br>(With Only Moderate Amounts of Silliness)</div></div>';
+  } else if (section.type === 'back-cover') {
+    pg.classList.add('back-cover');
+    pg.innerHTML = '<div class="back-cover-text">' + section.html + '</div>';
+  } else if (section.type === 'spine') {
+    pg.classList.add('spine-page');
+    pg.innerHTML = '<div class="spine-text">' + section.html + '</div>';
   } else if (section.type === 'dedication') {
     pg.classList.add('dedication');
     pg.style.backgroundImage = 'url(' + DED_IMG + ')';
     pg.innerHTML = '<div class="ded-text">' + section.html + '</div>';
   } else {
     pg.innerHTML = section.html;
+  }
+
+  // Parent epilogue pages get a softer, dedication-like treatment
+  if (section.label && section.label.indexOf('Ch 9') !== -1) {
+    pg.classList.add('parent-epilogue');
   }
 
   if (section.type === 'poem') {
@@ -335,8 +355,8 @@ function buildPage(section) {
     });
   }
 
-  // Remove illustration notes from pages that have actual images
-  if (section.bg || section.img || section.type === 'cover' || section.type === 'dedication') {
+  // Remove illustration notes from pages that have actual images or special layouts
+  if (section.bg || section.img || section.type === 'cover' || section.type === 'dedication' || section.type === 'back-cover' || section.type === 'spine') {
     pg.querySelectorAll('.il').forEach(el => el.remove());
   }
 
@@ -390,31 +410,58 @@ async function render() {
 
   const sections = await loadContentFiles();
 
-  // Build all pages
-  const allPages = sections.map(section => ({
+  // Separate cover wrap pages from content pages
+  const coverSection = sections.find(s => s.type === 'cover');
+  const backCoverSection = sections.find(s => s.type === 'back-cover');
+  const spineSection = sections.find(s => s.type === 'spine');
+  const contentSections = sections.filter(s => s.type !== 'cover' && s.type !== 'back-cover' && s.type !== 'spine');
+
+  // Build cover wrap: back cover (left) | cover with spine overlay (right)
+  if (coverSection && backCoverSection) {
+    const wrap = document.createElement('div');
+    wrap.className = 'cover-wrap';
+
+    const leftCol = createColumn('left-page');
+    const backPg = buildPage(backCoverSection);
+    leftCol.appendChild(backPg);
+    leftCol.appendChild(buildFooter(backPg));
+
+    const rightCol = createColumn('right-page');
+    const coverPg = buildPage(coverSection);
+
+    // Add spine as overlay on left edge of cover
+    if (spineSection) {
+      const spineOverlay = document.createElement('div');
+      spineOverlay.className = 'spine-overlay';
+      spineOverlay.innerHTML = '<div class="spine-text">' + spineSection.html + '</div>';
+      coverPg.appendChild(spineOverlay);
+    }
+
+    rightCol.appendChild(coverPg);
+    rightCol.appendChild(buildFooter(coverPg));
+
+    wrap.appendChild(leftCol);
+    wrap.appendChild(rightCol);
+    book.appendChild(wrap);
+  }
+
+  // Build remaining content pages
+  const allPages = contentSections.map(section => ({
     pg: buildPage(section),
     num: section.page,
     type: section.type,
     bg: section.bg
   }));
 
-  // Arrange into spreads: page 1 alone, then pairs
+  // Arrange into spreads: first page alone, then pairs
   let i = 0;
-  let firstSpread = true;
+  let firstSpread = !coverSection; // if we have a cover wrap, add break before first content spread
 
   while (i < allPages.length) {
     if (!firstSpread) book.appendChild(createSpreadBreak());
     firstSpread = false;
 
-    if (i === 0) {
-      const spread = createSpread('single');
-      const col = createColumn();
-      col.appendChild(allPages[0].pg);
-      col.appendChild(buildFooter(allPages[0].pg));
-      spread.appendChild(col);
-      book.appendChild(spread);
-      i = 1;
-    } else if (i + 1 < allPages.length) {
+    if (i + 1 < allPages.length) {
       const spread = createSpread();
 
       const leftCol = createColumn('left-page');
@@ -446,7 +493,7 @@ async function render() {
 
   // Add clouds now that pages are in the DOM and have layout
   allPages.forEach(p => {
-    if (p.type !== 'cover' && p.type !== 'dedication' && !p.bg) {
+    if (p.type !== 'cover' && p.type !== 'dedication' && p.type !== 'back-cover' && p.type !== 'spine' && !p.bg) {
       addClouds(p.pg, p.num);
     }
   });
@@ -457,7 +504,7 @@ async function render() {
 
 function autoFitPages() {
   document.querySelectorAll('.pg').forEach(pg => {
-    if (pg.classList.contains('cover') || pg.classList.contains('dedication') || pg.classList.contains('has-overlay-img')) return;
+    if (pg.classList.contains('cover') || pg.classList.contains('back-cover') || pg.classList.contains('spine-page') || pg.classList.contains('dedication') || pg.classList.contains('has-overlay-img')) return;
 
     const maxH = pg.clientHeight;
     let fontSize = 10.5;

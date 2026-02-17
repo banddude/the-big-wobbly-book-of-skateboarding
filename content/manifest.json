@@ -1,4 +1,5 @@
 [
+  "98-spine.md",
   "00-cover.md",
   "02-a-note-before-we-begin.md",
   "01-dedication.md",
@@ -18,9 +19,6 @@
   "16-ch-5-your-first-ride-pushing.md",
   "17-ch-5-your-first-ride-stopping.md",
   "18-ch-5-your-first-ride-turning.md",
-  "19-ch-6-practice-plan-week-1-2.md",
-  "20-ch-6-practice-plan-week-3-8.md",
-  "21-ch-6-practice-plan-week-9.md",
   "22-ch-7-hard-parts-falls.md",
   "23-ch-7-hard-parts-rest-defeat.md",
   "24-ch-7-hard-parts-fear.md",
@@ -28,10 +26,14 @@
   "26-ch-8-skatepark-etiquette-opener.md",
   "26-ch-8-skatepark-etiquette-rules-1-3.md",
   "27-ch-8-skatepark-etiquette-rules-4-6.md",
-  "28-ch-9-for-parents-support.md",
-  "29-ch-9-for-parents-pace-poem.md",
   "30-ch-10-the-end-prose.md",
   "31-ch-10-the-end-poem-finale.md",
+  "28-ch-9-for-parents-support.md",
+  "29-ch-9-for-parents-pace-poem.md",
   "32-appendix-first-aid-scrapessprains.md",
-  "33-appendix-first-aid-headfractures.md"
+  "33-appendix-first-aid-headfractures.md",
+  "19-ch-6-practice-plan-week-1-2.md",
+  "20-ch-6-practice-plan-week-3-8.md",
+  "21-ch-6-practice-plan-week-9.md",
+  "99-back-cover.md"
 ]
