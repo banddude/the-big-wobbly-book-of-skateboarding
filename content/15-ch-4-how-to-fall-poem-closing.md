@@ -2,6 +2,7 @@
 label: "Ch 4 — How to Fall (poem + closing)"
 page: 16
 type: poem
+bg: assets/illustrations/15-fall-practice-bg.jpg
 ---
 
 *If you should fall (and you will fall)*

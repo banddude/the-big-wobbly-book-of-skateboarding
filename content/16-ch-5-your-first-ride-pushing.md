@@ -1,6 +1,9 @@
 ---
 label: "Ch 5 — Your First Ride (pushing)"
 page: 17
+img: assets/illustrations/16-pushing.png
+img_pos: top-right
+img_w: 35
 ---
 
 **CHAPTER 5**

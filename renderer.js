@@ -192,6 +192,9 @@ async function loadContentFiles() {
       img: meta.img || null,
       img_pos: meta.img_pos || 'bottom-right',
       img_size: meta.img_size || 25,
+      img_w: meta.img_w ? parseFloat(meta.img_w) : 65,
+      img_caption_left: meta.img_caption_left || null,
+      img_caption_right: meta.img_caption_right || null,
       html: markdownToHtml(body, { hideTBD: hideTBD })
     };
   }));
@@ -269,6 +272,7 @@ function buildPage(section) {
     pg.innerHTML = '<div class="cover-text"><h1>THE<br>BIG WOBBLY BOOK<br>OF<br>SKATEBOARDING</h1><div class="sub">A Real, Actual, Legitimate Guide<br>(With Only Moderate Amounts of Silliness)</div></div>';
   } else if (section.type === 'back-cover') {
     pg.classList.add('back-cover');
+    if (section.bg) pg.classList.add('has-bg');
     pg.innerHTML = '<div class="back-cover-text">' + section.html + '</div>';
   } else if (section.type === 'spine') {
     pg.classList.add('spine-page');
@@ -309,8 +313,9 @@ function buildPage(section) {
       imgEl.crossOrigin = 'anonymous';
     }
     imgEl.src = imgSrc;
-    imgEl.style.width = '65%';
-    imgEl.style.height = '65%';
+    const imgW = section.img_w || 65;
+    imgEl.style.width = imgW + '%';
+    imgEl.style.height = imgW + '%';
     imgEl.style.objectFit = 'contain';
     imgEl.style.pointerEvents = 'none';
     imgEl.style.zIndex = '2';
@@ -325,24 +330,68 @@ function buildPage(section) {
       pg.appendChild(imgEl);
     } else {
       // Top images: float with shape-outside polygon for text wrapping
-      imgEl.style.float = pos.includes('right') ? 'right' : 'left';
-      imgEl.style.position = 'relative';
+      const hasCaptions = !!(section.img_caption_left || section.img_caption_right);
       imgEl.style.transform = 'scaleX(-1)';
-      imgEl.style.shapeMargin = '5px';
-      imgEl.style.margin = pos.includes('right') ? '-25px -20px 5px 8px' : '-25px 8px 5px -20px';
-      // Compute polygon from alpha channel once image loads
-      const onImgReady = function() {
-        try {
-          const poly = computeShapePolygon(imgEl, true);
-          imgEl.style.shapeOutside = poly;
-        } catch(e) {
-          // Fallback: no shape wrapping, just rectangular float
-        }
-      };
-      if (imgEl.complete && imgEl.naturalWidth) onImgReady();
-      else imgEl.onload = onImgReady;
-      // Insert at the top of content
-      pg.insertBefore(imgEl, pg.firstChild);
+
+      if (hasCaptions) {
+        // Wrap the image so a caption row can sit under it without disturbing
+        // the shape-outside float geometry (the wrap is sized to the image only;
+        // the caption row overflows below via absolute positioning).
+        const wrap = document.createElement('div');
+        wrap.className = 'img-wrap';
+        wrap.style.float = pos.includes('right') ? 'right' : 'left';
+        wrap.style.width = imgW + '%';
+        wrap.style.shapeMargin = '5px';
+        wrap.style.margin = pos.includes('right') ? '-25px -20px 22px 8px' : '-25px 8px 22px -20px';
+
+        imgEl.style.width = '100%';
+        imgEl.style.height = '100%';
+        imgEl.style.display = 'block';
+        wrap.appendChild(imgEl);
+
+        const capRow = document.createElement('div');
+        capRow.className = 'img-caption-row';
+        const leftCap = document.createElement('div');
+        leftCap.className = 'img-caption';
+        leftCap.textContent = section.img_caption_left || '';
+        const rightCap = document.createElement('div');
+        rightCap.className = 'img-caption';
+        rightCap.textContent = section.img_caption_right || '';
+        capRow.appendChild(leftCap);
+        capRow.appendChild(rightCap);
+        wrap.appendChild(capRow);
+
+        const onImgReady = function() {
+          try {
+            const poly = computeShapePolygon(imgEl, true);
+            wrap.style.shapeOutside = poly;
+          } catch(e) {
+            // Fallback: no shape wrapping, just rectangular float
+          }
+        };
+        if (imgEl.complete && imgEl.naturalWidth) onImgReady();
+        else imgEl.onload = onImgReady;
+
+        pg.insertBefore(wrap, pg.firstChild);
+      } else {
+        imgEl.style.float = pos.includes('right') ? 'right' : 'left';
+        imgEl.style.position = 'relative';
+        imgEl.style.shapeMargin = '5px';
+        imgEl.style.margin = pos.includes('right') ? '-25px -20px 5px 8px' : '-25px 8px 5px -20px';
+        // Compute polygon from alpha channel once image loads
+        const onImgReady = function() {
+          try {
+            const poly = computeShapePolygon(imgEl, true);
+            imgEl.style.shapeOutside = poly;
+          } catch(e) {
+            // Fallback: no shape wrapping, just rectangular float
+          }
+        };
+        if (imgEl.complete && imgEl.naturalWidth) onImgReady();
+        else imgEl.onload = onImgReady;
+        // Insert at the top of content
+        pg.insertBefore(imgEl, pg.firstChild);
+      }
     }
 
     // Position parent notes to the left of the image
@@ -504,16 +553,18 @@ async function render() {
 
 function autoFitPages() {
   document.querySelectorAll('.pg').forEach(pg => {
-    if (pg.classList.contains('cover') || pg.classList.contains('back-cover') || pg.classList.contains('spine-page') || pg.classList.contains('dedication') || pg.classList.contains('has-overlay-img')) return;
+    if (pg.classList.contains('cover') || pg.classList.contains('back-cover') || pg.classList.contains('spine-page') || pg.classList.contains('dedication')) return;
 
+    const isOverlay = pg.classList.contains('has-overlay-img');
     const maxH = pg.clientHeight;
-    let fontSize = 10.5;
+    let fontSize = isOverlay ? 8.5 : 10.5;
     const minFontSize = 7;
     const step = 0.25;
 
     pg.style.fontSize = fontSize + 'px';
 
     while (pg.scrollHeight > maxH && fontSize > minFontSize) {
+      const beforeH = pg.scrollHeight;
       fontSize -= step;
       pg.style.fontSize = fontSize + 'px';
       const lh = 1.35 + (fontSize - minFontSize) / (10.5 - minFontSize) * 0.2;
@@ -527,6 +578,12 @@ function autoFitPages() {
         n.style.padding = '4px 6px';
         n.style.margin = Math.max(3, pMargin) + 'px 0';
       });
+
+      // Some overflow (e.g. a bottom-position image bleeding past the page
+      // edge on purpose) isn't caused by text and won't shrink with font
+      // size. Stop as soon as a step stops helping instead of grinding to
+      // the floor for no visual benefit.
+      if (pg.scrollHeight >= beforeH) break;
     }
   });
 }

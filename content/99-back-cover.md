@@ -1,6 +1,7 @@
 ---
 label: Back Cover
 type: back-cover
+bg: assets/illustrations/99-sunset-bg.jpg
 ---
 
 **They told you it would be easy. They lied.**

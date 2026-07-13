@@ -102,6 +102,25 @@ body { background:#E5DDD5; font-family:'Nunito',sans-serif; color:#3D2C24; paddi
   text-align:center;
 }
 
+/* Caption row under a floated top image (img_caption_left / img_caption_right) */
+.pg .img-wrap { position:relative; }
+.pg .img-caption-row {
+  position:absolute;
+  top:100%;
+  left:0;
+  right:0;
+  display:flex;
+  padding-top:2px;
+}
+.pg .img-caption {
+  flex:1;
+  text-align:center;
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:8px;
+  color:#6B5A8A;
+}
+
 /* Drop cap on first paragraph of content pages */
 .pg.has-dropcap > p:first-child::first-letter {
   font-family:'Fraunces',serif;
@@ -365,4 +384,13 @@ body { background:#E5DDD5; font-family:'Nunito',sans-serif; color:#3D2C24; paddi
   body { padding:20px 8px; }
   .page-footer { max-width:min(360px, calc(100vw - 32px)); }
   .spread-break { max-width:min(360px, calc(100vw - 32px)); }
+}
+
+/* Back cover with full-bleed art: keep text readable */
+.pg.back-cover.has-bg .back-cover-text {
+  background: rgba(50,35,28,.68);
+  border-radius: 10px;
+  padding: 16px 14px;
+  height: auto;
+  margin: auto 0 14px;
 }

@@ -2,6 +2,7 @@
 label: "Ch 7 — Hard Parts (poem + closing)"
 page: 26
 type: poem
+bg: assets/illustrations/25-helping-up-bg.jpg
 ---
 
 *You fell.*
