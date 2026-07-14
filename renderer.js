@@ -195,6 +195,7 @@ async function loadContentFiles() {
       img_w: meta.img_w ? parseFloat(meta.img_w) : 65,
       img_caption_left: meta.img_caption_left || null,
       img_caption_right: meta.img_caption_right || null,
+      title: meta.title || null,
       html: markdownToHtml(body, { hideTBD: hideTBD })
     };
   }));
@@ -281,6 +282,14 @@ function buildPage(section) {
     pg.classList.add('dedication');
     pg.style.backgroundImage = 'url(' + DED_IMG + ')';
     pg.innerHTML = '<div class="ded-text">' + section.html + '</div>';
+  } else if (section.type === 'chart') {
+    pg.classList.add('chart-page');
+    const imgSrc = (typeof CONTENT_DATA !== 'undefined' && CONTENT_DATA.images && CONTENT_DATA.images[section.img])
+      ? CONTENT_DATA.images[section.img]
+      : section.img;
+    const titleHtml = section.title ? '<div class="chart-title">' + section.title + '</div>' : '';
+    pg.innerHTML = titleHtml + '<div class="chart-img" style="background-image:url(' + imgSrc + ')"></div><div class="chart-caption">' + section.html + '</div>';
+    return pg;
   } else {
     pg.innerHTML = section.html;
   }
@@ -292,6 +301,8 @@ function buildPage(section) {
 
   if (section.type === 'poem') {
     pg.classList.add('poem-page');
+    pg.innerHTML = '<div class="poem-inner">' + section.html + '</div>';
+    if (section.bg) pg.classList.add('has-bg-art');
   }
 
   // Background image from frontmatter
@@ -553,7 +564,7 @@ async function render() {
 
 function autoFitPages() {
   document.querySelectorAll('.pg').forEach(pg => {
-    if (pg.classList.contains('cover') || pg.classList.contains('back-cover') || pg.classList.contains('spine-page') || pg.classList.contains('dedication')) return;
+    if (pg.classList.contains('cover') || pg.classList.contains('back-cover') || pg.classList.contains('spine-page') || pg.classList.contains('dedication') || pg.classList.contains('chart-page') || pg.classList.contains('poem-page')) return;
 
     const isOverlay = pg.classList.contains('has-overlay-img');
     const maxH = pg.clientHeight;

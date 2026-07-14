@@ -2,7 +2,7 @@
 label: "Ch 7 — Hard Parts (falls)"
 page: 23
 img: assets/illustrations/22-comfort.png
-img_pos: top-right
+img_pos: top-left
 img_w: 45
 ---
 

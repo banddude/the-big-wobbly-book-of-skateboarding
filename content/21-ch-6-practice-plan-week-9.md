@@ -2,7 +2,7 @@
 label: "Ch 6 — Practice Plan (week 9+)"
 page: 22
 img: assets/illustrations/21-ollie.png
-img_pos: top-right
+img_pos: top-left
 img_w: 45
 ---
 

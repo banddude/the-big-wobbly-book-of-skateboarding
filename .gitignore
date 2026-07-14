@@ -1,2 +1,8 @@
 .DS_Store
 CLAUDE.md
+
+# Art generation working scratch (heavy; approved art is promoted into assets/illustrations)
+art-gen/output/
+art-gen/approved/
+art-gen/pastel/
+art-gen/reference/
