@@ -141,8 +141,24 @@ body { background:#E5DDD5; font-family:'Nunito',sans-serif; color:#3D2C24; paddi
   line-height:1.5;
   color:#8A5A6B;
 }
-.pg.poem-page p { margin-bottom:6px; }
+.pg.poem-page p { margin-bottom:0; }
 .pg.poem-page .poem-inner { width:100%; }
+.pg.poem-page .poem-line { line-height:1.42; }
+.pg.poem-page .stanza-gap { height:0.7em; }
+.pg.poem-page .poem-refrain {
+  font-family:'Fraunces',serif;
+  font-style:normal;
+  font-weight:900;
+  font-size:0.62em;
+  letter-spacing:1px;
+  color:#A0522D;
+  margin-top:0.9em;
+}
+.pg.poem-page .poem-refrain + .poem-line {
+  font-size:0.68em;
+  color:#8A7A6A;
+  margin-top:0.15em;
+}
 
 /* Chart / diagram pages */
 .pg.chart-page {

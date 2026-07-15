@@ -46,6 +46,29 @@ function markdownToHtml(md, options) {
   const opts = options || {};
   // Strip illustration notes before parsing (they can span lines and merge with content)
   md = md.replace(/\*\[[\s\S]*?\]\*/g, '');
+
+  // Poem mode: preserve each source line as its own centered line of verse.
+  // Blank lines become stanza breaks. This keeps poems reading as poems
+  // instead of collapsing into one wrapped prose block.
+  if (opts.poem) {
+    const out = [];
+    md.split('\n').forEach(function(raw) {
+      const t = raw.trim();
+      if (t === '') { out.push('<p class="stanza-gap"></p>'); return; }
+      const f = inlineFormat(t);
+      // A whole-line bold span (e.g. THE END) becomes an emphasized refrain line.
+      if (/^<strong>[\s\S]*<\/strong>$/.test(f) && f.indexOf('<strong>', 1) === -1) {
+        out.push('<p class="poem-refrain">' + f + '</p>');
+      } else {
+        out.push('<p class="poem-line">' + f + '</p>');
+      }
+    });
+    // Collapse leading/trailing/duplicate stanza gaps
+    return out.join('')
+      .replace(/^(?:<p class="stanza-gap"><\/p>)+/, '')
+      .replace(/(?:<p class="stanza-gap"><\/p>)+$/, '')
+      .replace(/(?:<p class="stanza-gap"><\/p>){2,}/g, '<p class="stanza-gap"></p>');
+  }
   // Strip lines containing only [TBD] placeholders
   if (opts.hideTBD) {
     md = md.split('\n').filter(function(line) {
@@ -192,7 +215,7 @@ async function loadContentFiles() {
       img_flip: (meta.img_flip === false || meta.img_flip === 'false') ? false : true,
       chapter_start: (meta.chapter_start === true || meta.chapter_start === 'true') ? true : false,
       title: meta.title || null,
-      html: markdownToHtml(body, { hideTBD: hideTBD })
+      html: markdownToHtml(body, { hideTBD: hideTBD, poem: pageType === 'poem' })
     };
   }));
 
@@ -275,8 +298,11 @@ function buildPage(section) {
       // Bottom images: absolute position (text sits above)
       imgEl.style.position = 'absolute';
       imgEl.style.bottom = '-25px';
-      if (pos.includes('right')) imgEl.style.right = '20px';
-      else imgEl.style.left = '8px';
+      if (pos.includes('right')) { imgEl.style.right = '20px'; }
+      else if (pos.includes('center')) {
+        imgEl.style.left = '50%';
+        imgEl.style.transform = 'translateX(-50%)' + (section.img_flip ? ' scaleX(-1)' : '');
+      } else { imgEl.style.left = '8px'; }
       pg.appendChild(imgEl);
     } else {
       // Top images: float with shape-outside polygon for text wrapping
@@ -424,10 +450,15 @@ async function render() {
     chapter_start: section.chapter_start
   }));
 
-  // Insert blank filler pages so every chapter opener starts on the LEFT (even index)
+  // Chapter placement. Every chapter already starts at the top of its own
+  // fresh page. Forcing each opener onto the LEFT page also injects blank
+  // filler pages, which made the back half read as broken and sparse next to
+  // the dense, continuous front half. Off by default: chapters flow. Flip to
+  // true to restore left-page openers (with blank fillers where needed).
+  const FORCE_CHAPTER_LEFT = false;
   const arranged = [];
   allPages.forEach(p => {
-    if (p.chapter_start && arranged.length % 2 === 1) {
+    if (FORCE_CHAPTER_LEFT && p.chapter_start && arranged.length % 2 === 1) {
       arranged.push({ pg: (function(){ const b = document.createElement('div'); b.className = 'pg blank'; return b; })(), num: 0, type: 'blank', bg: null });
     }
     arranged.push(p);
@@ -469,6 +500,19 @@ async function render() {
 }
 
 function autoFitPages() {
+  // Poem pages: keep the big Caveat hand, but shrink the whole page's base
+  // font until every line of verse fits the fixed page height (long finale
+  // poem would otherwise overflow when set line-by-line).
+  document.querySelectorAll('.pg.poem-page').forEach(pg => {
+    const maxH = pg.clientHeight;
+    let fs = 18;
+    pg.style.fontSize = fs + 'px';
+    while (pg.scrollHeight > maxH && fs > 10.5) {
+      fs -= 0.5;
+      pg.style.fontSize = fs + 'px';
+    }
+  });
+
   document.querySelectorAll('.pg').forEach(pg => {
     if (pg.classList.contains('cover') || pg.classList.contains('back-cover') || pg.classList.contains('spine-page') || pg.classList.contains('dedication') || pg.classList.contains('chart-page') || pg.classList.contains('poem-page') || pg.classList.contains('blank')) return;
 
@@ -477,6 +521,13 @@ function autoFitPages() {
     let fontSize = isOverlay ? 8.5 : 10.5;
     const minFontSize = 6.5;
     const step = 0.25;
+
+    // A bottom-anchored image bleeds past the page edge on purpose; its
+    // overflow won't shrink with font size. Only such pages should stop the
+    // fit loop early. Pure text pages must keep shrinking until the text
+    // actually fits, or they clip (text bleeding off the bottom).
+    const bleedImg = pg.querySelector('img');
+    const hasBleedImg = !!(bleedImg && bleedImg.style.position === 'absolute');
 
     pg.style.fontSize = fontSize + 'px';
 
@@ -496,11 +547,9 @@ function autoFitPages() {
         n.style.margin = Math.max(3, pMargin) + 'px 0';
       });
 
-      // Some overflow (e.g. a bottom-position image bleeding past the page
-      // edge on purpose) isn't caused by text and won't shrink with font
-      // size. Stop as soon as a step stops helping instead of grinding to
-      // the floor for no visual benefit.
-      if (pg.scrollHeight >= beforeH) break;
+      // For image-bleed pages only: stop once a step stops helping, since the
+      // residual overflow is the image, not the text.
+      if (hasBleedImg && pg.scrollHeight >= beforeH) break;
     }
   });
 }

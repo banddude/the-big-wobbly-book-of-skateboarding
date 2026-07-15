@@ -26,7 +26,7 @@ These are not "walk it off" situations. These are "tell a grown-up and possibly 
 
 If you hit your head, **you are done skating for the day.** No exceptions. Even with a helmet. Watch for headache, dizziness, confusion, nausea, vision changes, or just feeling "off." Any of those could mean a concussion. See a doctor. Do not skate again until a doctor says you can.
 
-After a hard head impact, check your helmet too. Skate helmets (the dual-certified kind, CPSC and ASTM) are designed to handle multiple low impacts. That is why skaters use them instead of bike helmets. But if you see a crack, if the foam inside is crushed or dented, or if you took a hit hard enough to rattle your brain, replace it. A damaged helmet is decoration, not protection.
+After a hard head impact, check your helmet too. If you see a crack, if the foam inside is crushed or dented, or if you took a hit hard enough to rattle your brain, replace it. A damaged helmet is decoration, not protection.
 
 **WRIST AND ARM INJURIES**
 
