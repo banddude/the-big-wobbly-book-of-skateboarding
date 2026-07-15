@@ -1,6 +1,10 @@
 ---
 label: "Ch 1 — The Skateboard (parts)"
 page: 5
+img: assets/illustrations/04-turtle.png
+img_pos: top-right
+img_w: 42
+img_flip: false
 ---
 
 **THE DECK** is the flat wooden part you stand on. It is made of layers of maple wood pressed together, which is called "ply." Most decks are 7-ply. It is strong. It has to be. It is going to hold you, your hopes, and your dreams. (And occasionally your backside, after you fall on it.) The front end is called the nose and the back end is called the tail.

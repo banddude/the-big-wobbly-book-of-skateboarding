@@ -1,6 +1,10 @@
 ---
 label: "Ch 4 — How to Fall (rules 3-4)"
 page: 14
+img: assets/illustrations/13-kneeslide.png
+img_pos: top-right
+img_w: 48
+img_flip: false
 ---
 
 **RULE 3: SPREAD THE IMPACT.**

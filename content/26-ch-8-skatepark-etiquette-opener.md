@@ -1,6 +1,7 @@
 ---
 label: "Ch 8 — Skatepark Etiquette (opener)"
 page: 27
+chapter_start: true
 img: assets/illustrations/26-etiquette.png
 img_pos: bottom-right
 img_w: 62

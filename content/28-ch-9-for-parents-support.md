@@ -1,6 +1,11 @@
 ---
 label: "Ch 9 — For Parents (support)"
 page: 30
+chapter_start: true
+img: assets/illustrations/28-parent.png
+img_pos: top-right
+img_w: 50
+img_flip: false
 ---
 
 **CHAPTER 9**

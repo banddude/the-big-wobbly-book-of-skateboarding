@@ -1,6 +1,10 @@
 ---
 label: "Ch 5 — Your First Ride (stopping)"
 page: 18
+img: assets/illustrations/17-stops.png
+img_pos: top-left
+img_w: 60
+img_flip: false
 ---
 
 **STOPPING**

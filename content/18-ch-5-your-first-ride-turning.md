@@ -1,6 +1,10 @@
 ---
 label: "Ch 5 — Your First Ride (turning)"
 page: 19
+img: assets/illustrations/18-carving.png
+img_pos: top-right
+img_w: 50
+img_flip: false
 ---
 
 **TURNING**

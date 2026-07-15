@@ -1,6 +1,10 @@
 ---
 label: "Ch 3 — Before You Roll (board 1-2)"
 page: 11
+img: assets/illustrations/10-kitty.png
+img_pos: top-left
+img_w: 48
+img_flip: false
 ---
 
 **GETTING TO KNOW YOUR BOARD (WITHOUT MOVING)**

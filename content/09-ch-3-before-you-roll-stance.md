@@ -1,11 +1,13 @@
 ---
 label: "Ch 3 — Before You Roll (stance)"
 page: 10
+chapter_start: true
 img: assets/illustrations/09-stance-panels.png
 img_pos: top-right
-img_w: 40
-img_caption_left: "Regular"
-img_caption_right: "Goofy"
+img_w: 42
+img_flip: false
+img_caption_left: "Goofy"
+img_caption_right: "Regular"
 ---
 
 **CHAPTER 3**

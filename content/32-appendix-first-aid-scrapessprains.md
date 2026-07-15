@@ -1,6 +1,11 @@
 ---
 label: "Appendix — First Aid (urgent)"
 page: 34
+chapter_start: true
+img: assets/illustrations/32-firstaid.png
+img_pos: top-right
+img_w: 38
+img_flip: false
 ---
 
 **APPENDIX**

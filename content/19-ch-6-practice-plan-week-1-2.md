@@ -1,6 +1,11 @@
 ---
 label: "Ch 6 — Practice Plan (week 1-2)"
 page: 20
+chapter_start: true
+img: assets/illustrations/19-clipboard.png
+img_pos: top-left
+img_w: 48
+img_flip: false
 ---
 
 **CHAPTER 6**

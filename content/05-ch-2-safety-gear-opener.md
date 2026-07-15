@@ -1,6 +1,7 @@
 ---
 label: "Ch 2 — Safety Gear (opener)"
 page: 6
+chapter_start: true
 img: assets/illustrations/ch2-confused-pads-group.png
 img_pos: top-right
 img_size: 25

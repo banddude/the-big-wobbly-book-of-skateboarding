@@ -40,18 +40,6 @@ const CONTENT_DIR = 'content/';
 const COVER_IMG = 'assets/cover.jpg';
 const DED_IMG = 'assets/dedication.jpg';
 
-const CLOUD_SVGS = [
-  '<svg viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg"><ellipse cx="35" cy="32" rx="28" ry="16" fill="FILLc"/><ellipse cx="60" cy="26" rx="26" ry="20" fill="FILLc"/><ellipse cx="85" cy="32" rx="24" ry="15" fill="FILLc"/></svg>',
-  '<svg viewBox="0 0 100 45" xmlns="http://www.w3.org/2000/svg"><ellipse cx="28" cy="28" rx="22" ry="14" fill="FILLc"/><ellipse cx="50" cy="22" rx="24" ry="18" fill="FILLc"/><ellipse cx="72" cy="28" rx="20" ry="13" fill="FILLc"/></svg>',
-  '<svg viewBox="0 0 140 50" xmlns="http://www.w3.org/2000/svg"><ellipse cx="35" cy="32" rx="25" ry="15" fill="FILLc"/><ellipse cx="65" cy="25" rx="28" ry="20" fill="FILLc"/><ellipse cx="95" cy="30" rx="30" ry="16" fill="FILLc"/><ellipse cx="115" cy="34" rx="18" ry="12" fill="FILLc"/></svg>'
-];
-
-const CLOUD_BANDS = [
-  { yMin: 5, yMax: 80 },
-  { yMin: 130, yMax: 210 },
-  { yMin: 260, yMax: 320 }
-];
-
 // --- Markdown to HTML ---
 
 function markdownToHtml(md, options) {
@@ -114,6 +102,12 @@ function markdownToHtml(md, options) {
     if (/^\*\[.*\]\*$/.test(para.trim())) {
       const noteText = formatted.replace(/^<em>\[/, '').replace(/\]<\/em>$/, '');
       htmlParts.push('<div class="il">' + noteText + '</div>');
+      continue;
+    }
+
+    // Whole paragraph is a single bold span -> render as a heading
+    if (formatted.indexOf('<strong>') === 0 && formatted.lastIndexOf('</strong>') === formatted.length - 9 && formatted.indexOf('<strong>', 1) === -1) {
+      htmlParts.push('<p class="heading">' + formatted + '</p>');
       continue;
     }
 
@@ -195,6 +189,8 @@ async function loadContentFiles() {
       img_w: meta.img_w ? parseFloat(meta.img_w) : 65,
       img_caption_left: meta.img_caption_left || null,
       img_caption_right: meta.img_caption_right || null,
+      img_flip: (meta.img_flip === false || meta.img_flip === 'false') ? false : true,
+      chapter_start: (meta.chapter_start === true || meta.chapter_start === 'true') ? true : false,
       title: meta.title || null,
       html: markdownToHtml(body, { hideTBD: hideTBD })
     };
@@ -204,63 +200,6 @@ async function loadContentFiles() {
 }
 
 // --- Page building ---
-
-function rectsOverlap(a, b, margin) {
-  return !(a.right + margin < b.left || b.right + margin < a.left ||
-           a.bottom + margin < b.top || b.bottom + margin < a.top);
-}
-
-function addClouds(pg, pageNum) {
-  const seed = pageNum * 7;
-  const pgRect = pg.getBoundingClientRect();
-
-  // Get exclusion zones from pn-note elements (relative to pg)
-  const exclusions = Array.from(pg.querySelectorAll('.pn-note')).map(el => {
-    const r = el.getBoundingClientRect();
-    return {
-      left: r.left - pgRect.left,
-      top: r.top - pgRect.top,
-      right: r.right - pgRect.left,
-      bottom: r.bottom - pgRect.top
-    };
-  });
-
-  const margin = 10;
-
-  CLOUD_BANDS.forEach((band, c) => {
-    const w = 72 + ((seed * (c + 3) * 13) % 45);
-    const h = w * 0.4;
-    const edgeX = 15; // half of 30px left/right padding
-    const edgeY = 14; // half of 28px top/bottom padding
-    const pageW = 380;
-    const pageH = 380;
-    let x = edgeX + ((seed * (c + 1) * 37) % (pageW - w - edgeX * 2));
-    let y = band.yMin + ((seed * (c + 2) * 19) % (band.yMax - band.yMin));
-    // Clamp to keep clouds within half-margin of edges
-    x = Math.max(edgeX, Math.min(x, pageW - w - edgeX));
-    y = Math.max(edgeY, Math.min(y, pageH - h - edgeY));
-
-    const cloudRect = { left: x, top: y, right: x + w, bottom: y + h };
-
-    // Skip clouds in bottom half of pages with overlay images
-    if (pg.classList.contains('has-overlay-img') && y > 190) return;
-
-    // Skip this cloud if it overlaps any exclusion zone
-    const overlaps = exclusions.some(ex => rectsOverlap(cloudRect, ex, margin));
-    if (overlaps) return;
-
-    const cloud = document.createElement('div');
-    cloud.className = 'cloud cloud-' + c;
-    const op = 1;
-    const svgIdx = (seed + c) % CLOUD_SVGS.length;
-    cloud.innerHTML = CLOUD_SVGS[svgIdx].replace(/FILLc/g, '#F3D7C7');
-    cloud.style.width = w + 'px';
-    cloud.style.left = x + 'px';
-    cloud.style.top = y + 'px';
-    cloud.style.opacity = op;
-    pg.appendChild(cloud);
-  });
-}
 
 function buildPage(section) {
   const pg = document.createElement('div');
@@ -273,7 +212,7 @@ function buildPage(section) {
     pg.innerHTML = '<div class="cover-text"><h1>THE<br>BIG WOBBLY BOOK<br>OF<br>SKATEBOARDING</h1><div class="sub">A Real, Actual, Legitimate Guide<br>(With Only Moderate Amounts of Silliness)</div></div>';
   } else if (section.type === 'back-cover') {
     pg.classList.add('back-cover');
-    if (section.bg) pg.classList.add('has-bg');
+    pg.style.backgroundImage = 'url(assets/illustrations/99-sunset-bg.jpg)';
     pg.innerHTML = '<div class="back-cover-text">' + section.html + '</div>';
   } else if (section.type === 'spine') {
     pg.classList.add('spine-page');
@@ -342,7 +281,8 @@ function buildPage(section) {
     } else {
       // Top images: float with shape-outside polygon for text wrapping
       const hasCaptions = !!(section.img_caption_left || section.img_caption_right);
-      imgEl.style.transform = 'scaleX(-1)';
+      const flip = section.img_flip;
+      if (flip) imgEl.style.transform = 'scaleX(-1)';
 
       if (hasCaptions) {
         // Wrap the image so a caption row can sit under it without disturbing
@@ -374,7 +314,7 @@ function buildPage(section) {
 
         const onImgReady = function() {
           try {
-            const poly = computeShapePolygon(imgEl, true);
+            const poly = computeShapePolygon(imgEl, flip);
             wrap.style.shapeOutside = poly;
           } catch(e) {
             // Fallback: no shape wrapping, just rectangular float
@@ -392,7 +332,7 @@ function buildPage(section) {
         // Compute polygon from alpha channel once image loads
         const onImgReady = function() {
           try {
-            const poly = computeShapePolygon(imgEl, true);
+            const poly = computeShapePolygon(imgEl, flip);
             imgEl.style.shapeOutside = poly;
           } catch(e) {
             // Fallback: no shape wrapping, just rectangular float
@@ -404,15 +344,6 @@ function buildPage(section) {
         pg.insertBefore(imgEl, pg.firstChild);
       }
     }
-
-    // Position parent notes to the left of the image
-    pg.querySelectorAll('.pn-note').forEach(note => {
-      note.style.position = 'absolute';
-      note.style.bottom = '120px';
-      note.style.left = '30px';
-      note.style.width = '40%';
-      note.style.margin = '0';
-    });
   }
 
   // Remove illustration notes from pages that have actual images or special layouts
@@ -429,25 +360,6 @@ function buildPage(section) {
   }
 
   return pg;
-}
-
-function buildFooter(pg) {
-  const footer = document.createElement('div');
-  footer.className = 'page-footer';
-  pg.querySelectorAll('.il').forEach(il => {
-    const d = document.createElement('div');
-    d.className = 'il-note';
-    d.textContent = '\u{1F3A8} ' + il.textContent.trim();
-    footer.appendChild(d);
-  });
-  return footer;
-}
-
-function createSpreadBreak() {
-  const divider = document.createElement('div');
-  divider.className = 'spread-break';
-  divider.innerHTML = '<span class="spread-break-dot"></span>';
-  return divider;
 }
 
 function createSpread(className) {
@@ -484,7 +396,6 @@ async function render() {
     const leftCol = createColumn('left-page');
     const backPg = buildPage(backCoverSection);
     leftCol.appendChild(backPg);
-    leftCol.appendChild(buildFooter(backPg));
 
     const rightCol = createColumn('right-page');
     const coverPg = buildPage(coverSection);
@@ -498,7 +409,6 @@ async function render() {
     }
 
     rightCol.appendChild(coverPg);
-    rightCol.appendChild(buildFooter(coverPg));
 
     wrap.appendChild(leftCol);
     wrap.appendChild(rightCol);
@@ -510,30 +420,34 @@ async function render() {
     pg: buildPage(section),
     num: section.page,
     type: section.type,
-    bg: section.bg
+    bg: section.bg,
+    chapter_start: section.chapter_start
   }));
 
-  // Arrange into spreads: first page alone, then pairs
+  // Insert blank filler pages so every chapter opener starts on the LEFT (even index)
+  const arranged = [];
+  allPages.forEach(p => {
+    if (p.chapter_start && arranged.length % 2 === 1) {
+      arranged.push({ pg: (function(){ const b = document.createElement('div'); b.className = 'pg blank'; return b; })(), num: 0, type: 'blank', bg: null });
+    }
+    arranged.push(p);
+  });
+
+  // Arrange into spreads: pairs of pages
   let i = 0;
-  let firstSpread = !coverSection; // if we have a cover wrap, add break before first content spread
 
-  while (i < allPages.length) {
-    if (!firstSpread) book.appendChild(createSpreadBreak());
-    firstSpread = false;
-
-    if (i + 1 < allPages.length) {
+  while (i < arranged.length) {
+    if (i + 1 < arranged.length) {
       const spread = createSpread();
 
       const leftCol = createColumn('left-page');
-      leftCol.appendChild(allPages[i].pg);
-      leftCol.appendChild(buildFooter(allPages[i].pg));
+      leftCol.appendChild(arranged[i].pg);
 
       const spine = document.createElement('div');
       spine.className = 'spine';
 
       const rightCol = createColumn('right-page');
-      rightCol.appendChild(allPages[i + 1].pg);
-      rightCol.appendChild(buildFooter(allPages[i + 1].pg));
+      rightCol.appendChild(arranged[i + 1].pg);
 
       spread.appendChild(leftCol);
       spread.appendChild(spine);
@@ -543,20 +457,12 @@ async function render() {
     } else {
       const spread = createSpread('single');
       const col = createColumn();
-      col.appendChild(allPages[i].pg);
-      col.appendChild(buildFooter(allPages[i].pg));
+      col.appendChild(arranged[i].pg);
       spread.appendChild(col);
       book.appendChild(spread);
       i++;
     }
   }
-
-  // Add clouds now that pages are in the DOM and have layout
-  allPages.forEach(p => {
-    if (p.type !== 'cover' && p.type !== 'dedication' && p.type !== 'back-cover' && p.type !== 'spine' && !p.bg) {
-      addClouds(p.pg, p.num);
-    }
-  });
 
   // Auto-fit: shrink text on overflowing pages
   setTimeout(autoFitPages, 100);
@@ -564,12 +470,12 @@ async function render() {
 
 function autoFitPages() {
   document.querySelectorAll('.pg').forEach(pg => {
-    if (pg.classList.contains('cover') || pg.classList.contains('back-cover') || pg.classList.contains('spine-page') || pg.classList.contains('dedication') || pg.classList.contains('chart-page') || pg.classList.contains('poem-page')) return;
+    if (pg.classList.contains('cover') || pg.classList.contains('back-cover') || pg.classList.contains('spine-page') || pg.classList.contains('dedication') || pg.classList.contains('chart-page') || pg.classList.contains('poem-page') || pg.classList.contains('blank')) return;
 
     const isOverlay = pg.classList.contains('has-overlay-img');
     const maxH = pg.clientHeight;
     let fontSize = isOverlay ? 8.5 : 10.5;
-    const minFontSize = 7;
+    const minFontSize = 6.5;
     const step = 0.25;
 
     pg.style.fontSize = fontSize + 'px';

@@ -1,6 +1,7 @@
 ---
 label: "Ch 1 — The Skateboard (opener)"
 page: 4
+chapter_start: true
 img: assets/illustrations/ch1-subject.png
 img_pos: bottom-right
 img_size: 25

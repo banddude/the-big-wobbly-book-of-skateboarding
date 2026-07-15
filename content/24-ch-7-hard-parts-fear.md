@@ -1,6 +1,10 @@
 ---
 label: "Ch 7 — Hard Parts (fear)"
 page: 25
+img: assets/illustrations/24-fear.png
+img_pos: top-left
+img_w: 52
+img_flip: false
 ---
 
 **THE FEAR**

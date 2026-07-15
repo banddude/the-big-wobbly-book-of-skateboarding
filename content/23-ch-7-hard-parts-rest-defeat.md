@@ -1,6 +1,10 @@
 ---
 label: "Ch 7 — Hard Parts (rest + defeat)"
 page: 24
+img: assets/illustrations/23-restdefeat.png
+img_pos: top-right
+img_w: 56
+img_flip: false
 ---
 
 **WHEN TO RIDE AND WHEN TO REST**

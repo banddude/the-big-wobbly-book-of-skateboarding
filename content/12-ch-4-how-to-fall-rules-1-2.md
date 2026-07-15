@@ -1,6 +1,7 @@
 ---
 label: "Ch 4 — How to Fall (rules 1-2)"
 page: 13
+chapter_start: true
 img: assets/illustrations/12-tuck-roll.png
 img_pos: top-left
 img_w: 45

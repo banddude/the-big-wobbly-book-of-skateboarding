@@ -1,6 +1,10 @@
 ---
 label: "Ch 9 — For Parents (pace + poem)"
 page: 31
+img: assets/illustrations/29-joyface.png
+img_pos: top-left
+img_w: 44
+img_flip: false
 ---
 
 **Respect their pace.** They might be cautious. They might be fearless. Neither is wrong. Don't push the cautious kid to go faster, and don't hold back the fearless kid (just make sure they're geared up). They'll find their own speed.

@@ -2,7 +2,6 @@
 label: "Ch 2 — Safety Gear (poem + closing)"
 page: 9
 type: poem
-bg: assets/illustrations/08-ch2-safety-gear-poem.jpg
 ---
 
 *A helmet on your head, my dear,*
