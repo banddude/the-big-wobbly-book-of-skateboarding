@@ -56,6 +56,17 @@ body { background:#E5DDD5; font-family:'Nunito',sans-serif; color:#3D2C24; paddi
 
 .pg > p, .pg > div:not(.cloud), .pg > strong, .pg > em, .pg > img { position:relative; z-index:2; }
 
+/* Decorative clouds: soft pink background texture, always behind content.
+   Placement (position/size/left/top/opacity) is set inline by the renderer
+   against each page's real geometry so they never sit under text or art. */
+.pg .cloud { pointer-events:none; z-index:0; }
+.pg .cloud svg { width:100%; height:auto; display:block; }
+/* Reserved bottom band for bottom-anchored art (kept in normal flow so autofit
+   measures the true available text height). */
+.pg .img-spacer { clear:both; }
+/* Full-bleed art fills the page edge-to-edge, behind the text layer. */
+.pg.img-full-bleed > img { z-index:0; }
+
 .pg p { margin-bottom:7px; }
 .pg p.heading {
   font-family:'Fraunces',serif;
